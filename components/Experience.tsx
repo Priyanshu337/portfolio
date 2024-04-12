@@ -16,9 +16,7 @@ export default function IndexPage() {
       <div className="m-3">
         <GetProjectDetails />
       </div>
-      {/* <div className="m-3">
-        <GetSolvativeDetails />
-      </div> */}
+
     </section>
   )
 }
@@ -58,6 +56,7 @@ function GetProjectDetails() {
             <p>JAVA</p>
             <p>Android Studio</p>
             <p>Figma</p>
+            <p>WearOS</p>
           </div>
         </div>
       </div>
@@ -105,48 +104,3 @@ flex-col rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rg
     </section>
   )
 }
-
-// function GetSolvativeDetails() {
-//   return (
-//     <section
-//       onClick={() => redirection("https://solvative.com/")}
-//       className="flex-column border-1 m-6 flex h-auto items-center justify-center dark:shadow-lg-invert"
-//     >
-//       <div
-//         className="text-side flex h-fit cursor-pointer
-// flex-col rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] md:flex-row"
-//       >
-//         <Image
-//           height={500}
-//           width={500}
-//           className="rounded-t-lg object-cover md:h-auto md:rounded md:rounded-l-lg"
-//           src="/solv.png"
-//           alt=""
-//         />
-//         <div className="flex flex-col justify-start p-6">
-//           <h5 className="mb-2 text-center text-xl  font-extrabold text-[#147efb] dark:text-neutral-50 md:text-left">
-//             solvative.com (Fullstack Engineer)
-//           </h5>
-//           <p className="mb-2  truncate font-extrabold text-gray-400 dark:text-gray-400">
-//             Jan,2017 - Nov,2019
-//           </p>
-//           <p className="max-w-[500px] text-xl font-medium leading-7 text-muted-foreground sm:text-base">
-//             This application provides a reliable VoIP calling and Tap alert
-//             solution for emergency prevention in Hospitals, Old age homes,
-//             Nursing Homes. I have worked on the following modules. Writing a
-//             Dialplan for calling, voiceMail, Push2Talk feature. Working on Tap
-//             Alert middleware. Responsible for the Licensing module to manage
-//             users, new installation, update, and other permissions. Data
-//             visualization for calls, tap alerts, users, active channels.
-//           </p>
-//           <div className="stack flex flex-wrap dark:text-white">
-//             <p>Nodejs</p>
-//             <p>Golang</p>
-//             <p>Docker</p>
-//             <p>React</p>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   )
-// }
