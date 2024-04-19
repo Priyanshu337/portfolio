@@ -64,7 +64,7 @@ export default function IndexPage() {
                 rel="noreferrer"
                 className="hover:text-primary-600 focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600 text-primary ease-in-out"
                 target="_blank"
-                href="https://docs.google.com/document/d/1VXBUyVZzisyPiO-cOXJeq9I4j7v5y3ZKFrR7En6_zok/edit?usp=sharing"
+                href="https://docs.google.com/document/d/1UgKsG2GP6o2tKXQCR1fdBPCOQKAqW2z06BGffCiT350/edit?usp=sharing"
               >
                 <FontAwesomeIcon
                   icon={faFile}
@@ -107,24 +107,7 @@ export default function IndexPage() {
                 height={38}
               />
             </li>
-            {/* <li>
-            <Image
-              src="/go.png"
-              title="Golang"
-              alt="program_img"
-              width={38}
-              height={38}
-            />
-          </li> */}
-            {/* <li>
-            <Image
-              src="/aws.png"
-              title="AWS"
-              alt="program_img"
-              width={38}
-              height={38}
-            />
-          </li> */}
+
             <li>
               <Image
                 src="/html-5.png"

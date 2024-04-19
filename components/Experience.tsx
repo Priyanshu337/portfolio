@@ -32,11 +32,11 @@ function GetProjectDetails() {
         onClick={() => redirection("https://hgffd.com/")}
         className="text-side flex h-fit cursor-pointer flex-col rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:shadow-lg-invert md:flex-row"
       >
-        <Image
+        <img
           height={500}
           width={500}
           className="rounded-t-lg object-cover md:h-auto md:rounded md:rounded-l-lg"
-          src="/c.png"
+          src="/mee.png"
           alt=""
         />
         <div className="flex flex-col justify-start p-6">
@@ -64,6 +64,7 @@ function GetProjectDetails() {
   )
 }
 
+
 function GetAppEaseMDDetails() {
   return (
     <section className="flex-column border-1 m-6 flex h-auto items-center justify-center dark:shadow-lg-invert">
@@ -72,11 +73,11 @@ function GetAppEaseMDDetails() {
         className="text-side flex h-fit cursor-pointer
 flex-col rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] md:flex-row"
       >
-        <Image
+        <img
           height={500}
           width={500}
           className="rounded-t-lg object-cover md:h-auto md:rounded md:rounded-l-lg"
-          src="/mee.png"
+          src="/c.png"
           alt=""
         />
         <div className="flex flex-col justify-start p-6">

@@ -16,7 +16,7 @@ export default function IndexPage() {
         <div className="contact__icons">
           <div className="contact__icon-box">
             <span>
-            <FontAwesomeIcon
+              <FontAwesomeIcon
                 icon={faMapLocationDot}
                 height={180}
                 width={30}
@@ -30,7 +30,7 @@ export default function IndexPage() {
           </div>
           <div className="contact__icon-box">
             <span>
-            <FontAwesomeIcon
+              <FontAwesomeIcon
                 icon={faEnvelopeOpenText}
                 height={180}
                 width={30}
@@ -39,8 +39,8 @@ export default function IndexPage() {
             </span>
             <div className="contact__info">
               <h3 className="font-extrabold ">Mail</h3>
-              <a href="mailto:manojown1@gmail.com">
-              priyanshuchoudhary0104@gmail.com 
+              <a href="mailto: priyanshuchoudhary0104@gmail.com">
+                priyanshuchoudhary0104@gmail.com
               </a>
             </div>
           </div>
