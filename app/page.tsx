@@ -18,12 +18,11 @@ export default function IndexPage() {
         <div className="flex flex-row flex-wrap-reverse items-center justify-center gap-10 pt-10  sm:flex-wrap">
           <section className="container grid items-center gap-4 md:w-[70%]">
             <div className="flex flex-col items-center  justify-center gap-4 text-center md:w-[70%] md:items-start md:text-start">
-              <h1 className="text-5xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
-                Software Engineer 👋
+              <h1 className="text-5xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-4xl lg:text-4.5xl">
+                Priyanshu Choudhary 👋
               </h1>
               <p className="max-w-[500px] text-xl font-medium leading-7 text-muted-foreground sm:text-base">
-                Hi, I&apos;m Priyanshu Choudhary. A passionate Fullstack Engineer based in
-                Ontario, Canada.
+                Hi there, I&apos;m FullStack developer who builds for Web and Mobile Application with design-oriented approach.
               </p>
             </div>
             <div className="flex justify-center gap-4 md:justify-start">
@@ -64,7 +63,7 @@ export default function IndexPage() {
                 rel="noreferrer"
                 className="hover:text-primary-600 focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600 text-primary ease-in-out"
                 target="_blank"
-                href="https://docs.google.com/document/d/1UgKsG2GP6o2tKXQCR1fdBPCOQKAqW2z06BGffCiT350/edit?usp=sharing"
+                href="https://docs.google.com/document/d/1VXBUyVZzisyPiO-cOXJeq9I4j7v5y3ZKFrR7En6_zok/edit"
               >
                 <FontAwesomeIcon
                   icon={faFile}
@@ -77,6 +76,7 @@ export default function IndexPage() {
           </section>
           <div className="hero-img" />
         </div>
+        {/* location will go here between profile and techstack because we need there */}
         <div className="skills mt-2 flex flex-row flex-wrap items-center justify-start pl-[3rem] pt-10 text-center">
           <h1 className="mb-4 flex font-extrabold ">Tech Stack</h1>
           <ul>
