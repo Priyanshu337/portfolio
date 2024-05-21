@@ -1,3 +1,3 @@
-import { useTheme } from "next-themes";
+// import { useTheme } from "next-themes";
 
-const { theme, resolvedTheme } = useTheme();
+// const { theme, resolvedTheme } = useTheme();
