@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import About from "../components/about"
 import EXP from "../components/Experience"
 import Contact from "../components/Contact"
+import Social from "@/components/social"
 
 
 
@@ -135,6 +136,9 @@ export default function IndexPage() {
       <div id="experience">
         <EXP />
       </div>
+      {/* <div id="social">
+        <Social />
+      </div> */}
       <div id="contact">
         <Contact />
       </div>

@@ -26,15 +26,7 @@ flex-col rounded-lg md:flex-row md:shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10
             About Me
           </h5>
           <p className="max-w-[500px] text-xl font-medium leading-7 text-muted-foreground sm:text-base">
-            In my Full stack Engineer role, I honed my abilities in Typescript,
-            ReactJs, NodeJs and HTML, CSS, Figma, providing a solid foundation for the
-            Software Engineer position. My collaboration, people-centric nature,
-            and eagerness to please have afforded me excellent decision-making
-            skills. I am excited to contribute my strengths and proficiency in
-            communication to your team’s efforts. As an extroverted and
-            personable communicator with a proven track record in Software
-            Development, my focus on building strong professional relationships
-            has been a valuable asset throughout my career.
+            I’m a dedicated Full-Stack Developer with a strong background in both front-end and back-end development. Specializing in JavaScript, TypeScript, and Node.js, I've successfully designed responsive user interfaces and optimized website performance. My work consistently drives user engagement and boosts sales. With a focus on high performance, security, and scalability, I excel in managing end-to-end development, ensuring every project delivers outstanding results
           </p>
         </div>
       </div>

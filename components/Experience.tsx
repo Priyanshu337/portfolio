@@ -30,7 +30,7 @@ function GetOutlierDetails() {
     <section className="flex-column border-1 m-6 flex h-auto items-center justify-center">
       <div
         onClick={() => redirection("https://outlier.ai/")}
-        className="text-side flex h-fit cursor-pointer flex-col rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:shadow-lg-invert md:flex-row"
+        className="text-side flex h-fit cursor-pointer flex-col rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:shadow-lg-invert md:flex-row p-5"
       >
         <img
           height={500}
@@ -53,10 +53,9 @@ function GetOutlierDetails() {
             Demonstrated strong attention to detail and proficiency in identifying potential errors or inconsistencies.
           </p>
           <div className="stack flex flex-wrap dark:text-white">
-            <p>JAVA</p>
-            <p>Android Studio</p>
-            <p>Figma</p>
-            <p>WearOS</p>
+            <p>JavaScript</p>
+            <p>Java</p>
+            <p>Prompt Evaluation </p>
           </div>
         </div>
       </div>
@@ -69,7 +68,7 @@ function GetLazzifyDetails() {
   return (
     <section className="flex-column border-1 m-6 flex h-auto items-center justify-center dark:shadow-lg-invert">
       <div
-        onClick={() => redirection("https://www.lazzify.com/c")}
+        onClick={() => redirection("https://www.lazzify.com/")}
         className="text-side flex h-fit cursor-pointer
 flex-col rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] md:flex-row"
       >
