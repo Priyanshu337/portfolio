@@ -26,7 +26,7 @@ flex-col rounded-lg md:flex-row md:shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10
             About Me
           </h5>
           <p className="max-w-[500px] text-xl font-medium leading-7 text-muted-foreground sm:text-base">
-            I am a dedicated Full-Stack Developer with a strong background in both front-end and back-end development. Specializing in JavaScript, TypeScript, and Node.js, I've successfully designed responsive user interfaces and optimized website performance. My work consistently drives user engagement and boosts sales. With a focus on high performance, security, and scalability, I excel in managing end-to-end development, ensuring every project delivers outstanding results
+            I am a dedicated Full-Stack Developer with a strong background in both front-end and back-end development. Specializing in JavaScript, TypeScript, and Node.js, I have successfully designed responsive user interfaces and optimized website performance. My work consistently drives user engagement and boosts sales. With a focus on high performance, security, and scalability, I excel in managing end-to-end development, ensuring every project delivers outstanding results
           </p>
         </div>
       </div>
