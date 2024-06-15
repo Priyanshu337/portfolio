@@ -136,9 +136,9 @@ export default function IndexPage() {
       <div id="experience">
         <EXP />
       </div>
-      {/* <div id="social">
+      <div id="social" style={{ padding: '20px' }}>
         <Social />
-      </div> */}
+      </div>
       <div id="contact">
         <Contact />
       </div>
