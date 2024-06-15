@@ -24,13 +24,12 @@ export default function IndexPage() {
 const redirection = (url: string) => {
   window.open(url)
 }
-
 function GetOutlierDetails() {
   return (
     <section className="flex-column border-1 m-6 flex h-auto items-center justify-center bg-white dark:bg-black">
       <div
         onClick={() => redirection("https://outlier.ai/")}
-        className="text-side flex h-fit cursor-pointer flex-col rounded-lg shadow-md dark:shadow-lg-invert md:flex-row p-5 border border-transparent transition duration-300 ease-in-out hover:border-[#147efb] hover:shadow-xl"
+        className="text-side flex h-fit cursor-pointer flex-col rounded-lg shadow-md dark:shadow-lg-invert md:flex-row p-5  border border-transparent transition duration-300 ease-in-out hover:border-[#147efb] hover:shadow-xl "
       >
         <img
           height={500}
@@ -39,18 +38,25 @@ function GetOutlierDetails() {
           src="/Outlier.jpeg"
           alt="Outlier AI"
         />
-        <div className="flex flex-col justify-start p-6">
+        <div className="flex flex-col justify-start p-6" style={{ width: '100%' }}>
           <h5 className="mb-2 text-center text-xl font-extrabold text-[#147efb] dark:text-[#147efb] md:text-left">
             Outlier AI
           </h5>
           <p className="mb-2 truncate font-extrabold text-gray-700 dark:text-gray-300">
-            AI Trainee (Mar 2020 - Oct 2021)
+            AI Trainee (Feb 2024 - Present)
           </p>
-          <p className="max-w-[500px] text-xl font-medium leading-7 text-gray-600 dark:text-gray-400">
-            Crafted high-quality prompts for AI models, leveraging NLP principles.
-            Conducted multilingual quality assurance across various programming languages (Python, C/C++, JavaScript, HTML, CSS).
-            Demonstrated strong attention to detail and proficiency in identifying potential errors or inconsistencies.
-          </p>
+          {/* Convert paragraph into an unordered list */}
+          <ul className="max-w-[500px] text-xl font-medium leading-7 text-gray-600 dark:text-gray-400 list-disc pl-6 mb-4">
+            <li>
+              Crafted high-quality prompts for AI models, leveraging NLP principles.
+            </li>
+            <li>
+              Conducted multilingual quality assurance across various programming languages (Python, C/C++, JavaScript, HTML, CSS).
+            </li>
+            <li>
+              Demonstrated strong attention to detail and proficiency in identifying potential errors or inconsistencies.
+            </li>
+          </ul>
           <div className="stack flex flex-wrap dark:text-white">
             <p className="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-2 py-1 rounded-md mr-2 mb-2">JavaScript</p>
             <p className="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-2 py-1 rounded-md mr-2 mb-2">Java</p>
@@ -62,16 +68,18 @@ function GetOutlierDetails() {
   );
 }
 
+
 function GetLazzifyDetails() {
   return (
+
     <section className="flex-column border-1 m-6 flex h-auto items-center justify-center dark:shadow-lg-invert bg-white dark:bg-black">
       <div
         onClick={() => redirection("https://www.lazzify.com/")}
         className="text-side flex h-fit cursor-pointer flex-col rounded-lg shadow-md md:flex-row p-5 border border-transparent transition duration-300 ease-in-out hover:border-[#147efb] hover:shadow-xl"
       >
         <img
-          className="rounded-t-lg object-cover md:h-auto md:rounded md:rounded-l-lg"
-          style={{ maxWidth: '90%', maxHeight: '450px' }}
+          className="rounded-t-lg object-cover md:h-auto md:rounded md:rounded-l-lg mt-40"
+          style={{ maxWidth: '65%', maxHeight: '450px' }}
           src="/Lazzify.png"
           alt="CloudMate Technologies LLP"
         />
@@ -85,16 +93,13 @@ function GetLazzifyDetails() {
           </p>
           <p className="max-w-[500px] text-xl font-medium leading-7 text-gray-600 dark:text-gray-400">
             <ul className="list-disc pl-6 mb-4">
-              <li>Developed web applications with React, Node.js, and SQL, reducing user-generated errors by 50%.</li>
-              <li>Increased user engagement by 40% through dynamic and responsive user interfaces.</li>
-              <li>Designed an e-commerce platform, resulting in a 25% increase in sales.</li>
-              <li>Enhanced website performance by reducing LCP by 25%.</li>
-              <li>Contributed to the design of request and response payloads for API endpoints.</li>
-              <li>Integrated backend services through Express.js and REST APIs.</li>
-              <li>Deployed and managed applications on AWS, leveraging services such as EC2, S3, and RDS to ensure scalability and reliability.</li>
-              <li>Collaborated with team members and clients using Figma for clear communication and project alignment.</li>
-              <li>Utilized agile methodologies to deliver high-quality applications.</li>
-              <li>Involved in end-to-end development from design to deployment, ensuring robust and efficient system integration.</li>
+              <li>Developed and maintained web applications using React, Node.js, and Redux, reducing errors by 50%..</li>
+              <li>Implemented security measures like HSTS and optimized UI with Lucide iconography.</li>
+              <li>Transitioned applications to HTTP/3 for improved performance and security.</li>
+              <li>Managed content delivery via Cloudflare CDN and deployed on Vercel.</li>
+              <li>Built responsive UIs using Radix UI and Tailwind CSS.</li>
+              <li>Integrated modern UI elements with shadcn/ui library.</li>
+              <li>Contributed to educational modernization with innovative solutions.</li>
             </ul>
           </p>
           <div className="stack flex flex-wrap dark:text-white">

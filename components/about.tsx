@@ -2,6 +2,7 @@ import { ImageError } from "next/dist/server/image-optimizer"
 import Image from "next/image"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Social from "./social"
 
 const imageStyle = {
   borderRadius: "50%",
@@ -10,18 +11,10 @@ const imageStyle = {
 export default function IndexPage() {
   return (
     <section className="flex-column m-6 flex h-auto items-center justify-center">
+      <Social />
       <div
-        className="text-side flex h-fit
-flex-col rounded-lg md:flex-row md:shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]"
-      >
-        <Image
-          height={500}
-          width={500}
-          className="rounded-t-lg object-cover md:h-auto md:rounded md:rounded-l-lg"
-          src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=100"
-          alt=""
-        />
-        <div className="flex flex-col justify-start p-6">
+        className="text-side flex h-fit flex-col rounded-lg ml-20 md:flex-row md:shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
+        <div className="flex flex-col justify-start p-6 ">
           <h5 className="mb-2 text-center text-xl  font-extrabold text-[#147efb] dark:text-neutral-50 md:text-left">
             About Me
           </h5>
