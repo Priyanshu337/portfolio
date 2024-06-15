@@ -130,14 +130,14 @@ export default function IndexPage() {
           </ul>
         </div>
       </div>
+      <div id="social" style={{ padding: '20px' }}>
+        <Social />
+      </div>
       <div id="about">
         <About />
       </div>
       <div id="experience">
         <EXP />
-      </div>
-      <div id="social" style={{ padding: '20px' }}>
-        <Social />
       </div>
       <div id="contact">
         <Contact />
