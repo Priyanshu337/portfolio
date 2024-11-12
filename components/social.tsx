@@ -26,14 +26,14 @@ function Social() {
                 <a href="mailto:priyanshuchoudhary0104@gmail.com"><div className="box box2"> <span className="icon">
                     <Image
                         src="/gmail.svg"
-                        alt="GitHub Logo"
+                        alt="Gmail Logo"
                         width={100}
                         height={100} />
                 </span></div></a>
 
                 <a href="www.linkedin.com/in/priyanshu0209"><div className="box box3" ><span className="icon"><Image
                     src="/linkedin.svg"
-                    alt="GitHub Logo"
+                    alt="LinkedIn Logo"
                     width={100}
                     height={100} /></span></div></a>
 

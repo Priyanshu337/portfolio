@@ -25,7 +25,7 @@ export default function IndexPage() {
             </span>
             <div className="contact__info">
               <h3 className="font-extrabold ">Location</h3>
-              <p>Kitchener, ON, N2A 0K9, Canada</p>
+              <p>Toronto, ON, Canada</p>
             </div>
           </div>
           <div className="contact__icon-box">

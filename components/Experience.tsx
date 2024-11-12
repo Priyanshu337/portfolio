@@ -24,6 +24,7 @@ export default function IndexPage() {
 const redirection = (url: string) => {
   window.open(url)
 }
+
 function GetOutlierDetails() {
   return (
     <section className="flex-column border-1 m-6 flex h-auto items-center justify-center bg-white dark:bg-black">
@@ -34,7 +35,7 @@ function GetOutlierDetails() {
         <img
           height={500}
           width={500}
-          className="rounded-t-lg object-cover md:h-auto md:rounded md:rounded-l-lg"
+          className="rounded-t-lg object-cover md:h-auto md:rounded md:rounded-l-lg "
           src="/Outlier.jpeg"
           alt="Outlier AI"
         />
@@ -75,11 +76,11 @@ function GetLazzifyDetails() {
     <section className="flex-column border-1 m-6 flex h-auto items-center justify-center dark:shadow-lg-invert bg-white dark:bg-black">
       <div
         onClick={() => redirection("https://www.lazzify.com/")}
-        className="text-side flex h-fit cursor-pointer flex-col rounded-lg shadow-md md:flex-row p-5 border border-transparent transition duration-300 ease-in-out hover:border-[#147efb] hover:shadow-xl"
+        className="text-side flex  h-fit cursor-pointer flex-row rounded-lg shadow-md md:flex-row p-5 border border-transparent transition duration-300 ease-in-out hover:border-[#147efb] hover:shadow-xl"
       >
         <img
-          className="rounded-t-lg object-cover md:h-auto md:rounded md:rounded-l-lg mt-40"
-          style={{ maxWidth: '65%', maxHeight: '450px' }}
+          className="rounded-t-lg object-cover md:h-auto md:rounded md:rounded-l-lg mt-30"
+          style={{ maxWidth: '60%', maxHeight: '450px' }}
           src="/Lazzify.png"
           alt="CloudMate Technologies LLP"
         />
@@ -89,22 +90,28 @@ function GetLazzifyDetails() {
             CloudMate Technologies LLP
           </h5>
           <p className="mb-2 truncate font-extrabold text-gray-700 dark:text-gray-300">
-            Front-end Developer (05/21 - 08/22)
+            Software Engineer (05/21 - 08/22)
           </p>
           <p className="max-w-[500px] text-xl font-medium leading-7 text-gray-600 dark:text-gray-400">
             <ul className="list-disc pl-6 mb-4">
-              <li>Developed and maintained web applications using React, Node.js, and Redux, reducing errors by 50%..</li>
-              <li>Implemented security measures like HSTS and optimized UI with Lucide iconography.</li>
-              <li>Transitioned applications to HTTP/3 for improved performance and security.</li>
-              <li>Managed content delivery via Cloudflare CDN and deployed on Vercel.</li>
-              <li>Built responsive UIs using Radix UI and Tailwind CSS.</li>
-              <li>Integrated modern UI elements with shadcn/ui library.</li>
-              <li>Contributed to educational modernization with innovative solutions.</li>
+              <li>During my tenure at Cloud Mate Technologies LLP, I wrote over 20,000 lines of code and resolved 50+ bugs, contributing to the development of 20+ features and 50+ deployments.</li>
+              <li>Resulting in a 25% increase in application performance and a 30% improvement in response time.</li>
+              <li>My efforts led to a 20% decrease in system downtime, with a maintained server uptime of 99.9%.</li>
+              <li>I optimized database queries, achieving 30% faster retrieval, and implemented 20+ API integrations.</li>
+              <li>I managed cloud resources across AWS, Azure, and Google Cloud..</li>
+              <li>Demonstrated excellent analytical, troubleshooting, and problem-solving skills, resolving over 50 issues in a dynamic environment.
+              </li>
+              <li>Participated in an Agile team, creating clean code and documenting work.
+              </li>
+              <li>Contributed to test automation to enable continuous integration and delivery.
+              </li>
             </ul>
           </p>
           <div className="stack flex flex-wrap dark:text-white">
             <p className="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-2 py-1 rounded-md mr-2 mb-2">React</p>
-            <p className="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-2 py-1 rounded-md mr-2 mb-2">C#</p>
+            <p className="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-2 py-1 rounded-md mr-2 mb-2">Javascript</p>
+
+            <p className="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-2 py-1 rounded-md mr-2 mb-2">TypeScript</p>
             <p className="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-2 py-1 rounded-md mr-2 mb-2">SQL</p>
           </div>
         </div>

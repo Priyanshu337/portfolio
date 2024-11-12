@@ -2,7 +2,7 @@ import { ImageError } from "next/dist/server/image-optimizer"
 import Image from "next/image"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import Social from "./social"
+import Social from "./Social"
 
 const imageStyle = {
   borderRadius: "50%",

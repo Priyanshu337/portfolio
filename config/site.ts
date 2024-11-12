@@ -25,6 +25,11 @@ export const siteConfig = {
       href: "/",
       ref: "#contact"
     },
+    {
+      title: "Project",
+      href: "/",
+      ref: "#project"
+    }
   ],
   links: {
     github: "https://github.com/Priyanshu337",
