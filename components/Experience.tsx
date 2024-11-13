@@ -92,7 +92,7 @@ function GetLazzifyDetails() {
           <p className="mb-2 truncate font-extrabold text-gray-700 dark:text-gray-300">
             Software Engineer (05/21 - 08/22)
           </p>
-          <p className="max-w-[500px] text-xl font-medium leading-7 text-gray-600 dark:text-gray-400">
+          <a className="max-w-[500px] text-xl font-medium leading-7 text-gray-600 dark:text-gray-400">
             <ul className="list-disc pl-6 mb-4">
               <li>During my tenure at Cloud Mate Technologies LLP, I wrote over 20,000 lines of code and resolved 50+ bugs, contributing to the development of 20+ features and 50+ deployments.</li>
               <li>Resulting in a 25% increase in application performance and a 30% improvement in response time.</li>
@@ -106,7 +106,7 @@ function GetLazzifyDetails() {
               <li>Contributed to test automation to enable continuous integration and delivery.
               </li>
             </ul>
-          </p>
+          </a>
           <div className="stack flex flex-wrap dark:text-white">
             <p className="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-2 py-1 rounded-md mr-2 mb-2">React</p>
             <p className="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-2 py-1 rounded-md mr-2 mb-2">Javascript</p>

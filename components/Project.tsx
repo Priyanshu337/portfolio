@@ -15,7 +15,7 @@ export default function IndexPage() {
                             </div>
                             {/* add the link for git proj */}
 
-                            <a href="">
+                            <a href="https://github.com/Priyanshu337/FigmaClone">
                                 <span className="icon">
                                     <Image
                                         src="/github-mark.svg"
