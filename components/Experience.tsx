@@ -78,9 +78,12 @@ function GetLazzifyDetails() {
         onClick={() => redirection("https://www.lazzify.com/")}
         className="text-side flex  h-fit cursor-pointer flex-row rounded-lg shadow-md md:flex-row p-5 border border-transparent transition duration-300 ease-in-out hover:border-[#147efb] hover:shadow-xl"
       >
+
         <img
           className="rounded-t-lg object-cover md:h-auto md:rounded md:rounded-l-lg mt-30"
-          style={{ maxWidth: '60%', maxHeight: '450px' }}
+          style={{
+            maxWidth: '70%', maxHeight: '550px', justifyItems: 'center', alignItems: 'center'
+          }}
           src="/Lazzify.png"
           alt="CloudMate Technologies LLP"
         />
@@ -92,18 +95,32 @@ function GetLazzifyDetails() {
           <p className="mb-2 truncate font-extrabold text-gray-700 dark:text-gray-300">
             Software Engineer (05/21 - 08/22)
           </p>
-          <a className="max-w-[500px] text-xl font-medium leading-7 text-gray-600 dark:text-gray-400">
+          <a className="max-w-[500px] text-l font-medium leading-7 text-gray-600 dark:text-gray-400">
             <ul className="list-disc pl-6 mb-4">
-              <li>During my tenure at Cloud Mate Technologies LLP, I wrote over 20,000 lines of code and resolved 50+ bugs, contributing to the development of 20+ features and 50+ deployments.</li>
-              <li>Resulting in a 25% increase in application performance and a 30% improvement in response time.</li>
-              <li>My efforts led to a 20% decrease in system downtime, with a maintained server uptime of 99.9%.</li>
-              <li>I optimized database queries, achieving 30% faster retrieval, and implemented 20+ API integrations.</li>
-              <li>I managed cloud resources across AWS, Azure, and Google Cloud..</li>
+              <li>Delivered 30+ successful deployments, developed 20+ features and resolved 50+ bugs.</li>
+              <li>Creating a technical solution that meets the functional requirements and Wireframes of a system.
+
+              </li>
+              <li>Transformed Wireframe and Prototype into Webpages using React.js, HTML, CSS, and JavaScript, leveraging Redux and ContextAPI for state management.
+
+              </li>
+              <li>Designed scalable backend systems with Node.js (MVC) and integrated 20+ REST APIs with Express.js.
+
+              </li>
+              <li>Integrated APIs with frontend and backend, thoroughly tested using Postman, ensuring robust security measures.
+              </li>
+              <li>Developed Test cases using Jest testing library
+
+              </li>
+              <li>Optimized database queries for 30% faster retrieval and enhanced app performance by 25%.
+
+              </li>
               <li>Demonstrated excellent analytical, troubleshooting, and problem-solving skills, resolving over 50 issues in a dynamic environment.
+
               </li>
               <li>Participated in an Agile team, creating clean code and documenting work.
               </li>
-              <li>Contributed to test automation to enable continuous integration and delivery.
+              <li>Collaborated in Agile workflows, contributing to CI/CD pipelines and delivering well-documented, clean code.
               </li>
             </ul>
           </a>
@@ -121,89 +138,3 @@ function GetLazzifyDetails() {
 }
 
 export { GetOutlierDetails, GetLazzifyDetails };
-
-
-
-
-
-
-// <section className="flex-column border-1 m-6 flex h-auto items-center justify-center">
-//       <div
-//         onClick={() => redirection("https://outlier.ai/")}
-//         className="text-side flex h-fit cursor-pointer flex-col rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:shadow-lg-invert md:flex-row p-5"
-//       >
-//         <img
-//           height={500}
-//           width={500}
-//           className="rounded-t-lg object-cover md:h-auto md:rounded md:rounded-l-lg"
-//           src="/Outlier.jpeg"
-//           alt=""
-//         />
-//         <div className="flex flex-col justify-start p-6">
-//           <h5 className="mb-2 text-center text-xl  font-extrabold text-[#147efb] dark:text-neutral-50 md:text-left">
-//             Outlier AI
-//           </h5>
-//           <p className="mb-2  truncate font-extrabold text-gray-400 dark:text-gray-400">
-//             AI Trainee (Mar,200 - Oct,2021)
-//           </p>
-//           <p className="max-w-[500px] text-xl font-medium leading-7 text-muted-foreground sm:text-base">
-
-//             Crafted high-quality prompts for AI models, leveraging NLP principles.
-//             Conducted multilingual quality assurance across various programming languages (Python, C/C++, JavaScript, HTML, CSS).
-//             Demonstrated strong attention to detail and proficiency in identifying potential errors or inconsistencies.
-//           </p>
-//           <div className="stack flex flex-wrap dark:text-white">
-//             <p>JavaScript</p>
-//             <p>Java</p>
-//             <p>Prompt Evaluation </p>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-
-
-
-
-// <section className="flex-column border-1 m-6 flex h-auto items-center justify-center dark:shadow-lg-invert">
-// <div
-//   onClick={() => redirection("https://www.lazzify.com/")}
-//   className="text-side flex h-fit cursor-pointer
-// flex-col rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] md:flex-row"
-// >
-//   <img
-//     height={500}
-//     width={500}
-//     className="rounded-t-lg object-cover md:h-auto md:rounded md:rounded-l-lg"
-//     src="/Lazzify.png"
-//     alt=""
-//   />
-//   <div className="flex flex-col justify-start p-6">
-//     <h5 className="mb-2 text-center text-xl  font-extrabold text-[#147efb] dark:text-neutral-50 md:text-left">
-//       CloudMate Technologies LLP
-//     </h5>
-//     <p className="mb-2  truncate font-extrabold text-gray-400 dark:text-gray-400">
-//       Front-end Developer (05/21 - 08/22).
-//       {/* <span className="text-gray-700 dark:text-white">Current</span> */}
-//     </p>
-//     <p className="max-w-[500px] text-xl font-medium leading-7 text-muted-foreground sm:text-base">
-//       Developed web applications with React, Node.js, and SQL, reducing user-generated errors by 50%.
-//       Increased user engagement by 40% through dynamic and responsive user interfaces.
-//       Designed an e-commerce platform, resulting in a 25% increase in sales.
-//       Enhanced website performance by reducing LCP by 25%.
-//       Contributed to the design of request and response payloads for API endpoints.
-//       Integrated backend services through Express.js and REST APIs.
-//       Deployed and managed applications on AWS, leveraging services such as EC2, S3, and RDS to ensure scalability and reliability.
-//       Collaborated with team members and clients using Figma for clear communication and project alignment.
-//       Utilized agile methodologies to deliver high-quality applications.
-//       Involved in end-to-end development from design to deployment, ensuring robust and efficient system integration.
-//       Projects: Lazzify
-//       {" "}
-//     </p>
-//     <div className="stack flex flex-wrap dark:text-white">
-//       <p>React</p>
-//       <p>C#</p>
-//       <p>SQL</p>
-//     </div>
-//   </div>
-// </div>
-// </section>
