@@ -26,6 +26,9 @@ export default function IndexPage() {
               <p className="max-w-[500px] text-xl font-medium leading-7 dark:text-gray-400 text-gray-600 sm:text-base">
                 Hi there, I'm a FullStack developer who builds for Web and Mobile Applications with a design-oriented approach.
               </p>
+              <p className="text-lg dark:text-gray-300 text-gray-700">
+                Let&apos;s build something amazing together!
+              </p>
             </div>
             <div className="flex justify-center gap-4 md:justify-start">
               <a

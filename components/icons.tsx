@@ -1,9 +1,13 @@
 import {
-  LucideProps,
-  Moon,
   SunMedium,
+  Moon,
+  Laptop,
+  Github,
   Twitter,
-  type Icon as LucideIcon,
+  Mail,
+  Linkedin,
+  type LucideIcon,
+  type LucideProps
 } from "lucide-react"
 
 export type Icon = LucideIcon
@@ -11,7 +15,11 @@ export type Icon = LucideIcon
 export const Icons = {
   sun: SunMedium,
   moon: Moon,
+  laptop: Laptop,
+  github: Github,
   twitter: Twitter,
+  mail: Mail,
+  linkedin: Linkedin,
   logo: (props: LucideProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
       <path
