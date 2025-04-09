@@ -1,5 +1,6 @@
 import "@/styles/globals.css"
-import { Metadata } from "next"
+import { Metadata, Viewport } from "next"
+import { Inter } from 'next/font/google'
 
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
@@ -9,22 +10,59 @@ import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 import Footer from "../components/footer"
 
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
+  metadataBase: new URL('https://priyanshuchoudhary.vercel.app'),
+  title: 'Priyanshu Choudhary - Full Stack Developer',
+  description: 'Portfolio website of Priyanshu Choudhary, a Full Stack Developer specializing in modern web technologies.',
+  keywords: ['Full Stack Developer', 'Web Development', 'React', 'Next.js', 'TypeScript', 'Node.js'],
+  authors: [{ name: 'Priyanshu Choudhary' }],
+  creator: 'Priyanshu Choudhary',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://priyanshuchoudhary.vercel.app',
+    title: 'Priyanshu Choudhary - Full Stack Developer',
+    description: 'Portfolio website of Priyanshu Choudhary, a Full Stack Developer specializing in modern web technologies.',
+    siteName: 'Priyanshu Choudhary Portfolio',
   },
-  description: siteConfig.description,
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Priyanshu Choudhary - Full Stack Developer',
+    description: 'Portfolio website of Priyanshu Choudhary, a Full Stack Developer specializing in modern web technologies.',
+    creator: '@priyanshu0209',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
   },
+  manifest: '/site.webmanifest',
+  verification: {
+    google: 'google-site-verification-code',
+  },
+}
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: 'white' },
+    { media: '(prefers-color-scheme: dark)', color: 'black' },
+  ],
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
 }
 
 interface RootLayoutProps {
@@ -41,10 +79,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <body
           className={cn(
             "min-h-screen font-sans antialiased",
-            fontSans.variable
+            fontSans.variable,
+            inter.className
           )}
         >
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
             <div className="min-w-screen relative flex min-h-screen flex-col items-center">
               <SiteHeader />
               <div className=" flex-1">{children}</div>

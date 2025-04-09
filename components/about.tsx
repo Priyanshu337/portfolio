@@ -1,28 +1,56 @@
+"use client"
+
 import { ImageError } from "next/dist/server/image-optimizer"
 import Image from "next/image"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Social from "./Social"
+import { motion } from "framer-motion"
 
 const imageStyle = {
   borderRadius: "50%",
   border: "1px solid #fff",
 }
-export default function IndexPage() {
+
+export default function About() {
   return (
     <section className="flex-column m-6 flex h-auto items-center justify-center">
       <Social />
-      <div
-        className="text-side flex h-fit flex-col rounded-lg ml-20 md:flex-row md:shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
-        <div className="flex flex-col justify-start p-6 ">
-          <h5 className="mb-2 text-center text-xl  font-extrabold text-[#147efb] dark:text-neutral-50 md:text-left">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="text-side flex h-fit flex-col rounded-lg ml-20 md:flex-row md:shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:shadow-white/5"
+      >
+        <div className="flex flex-col justify-start p-6 max-w-3xl">
+          <h5 className="mb-2 text-center text-xl font-extrabold dark:text-white text-black md:text-left">
             About Me
           </h5>
-          <p className="max-w-[500px] text-xl font-medium leading-7 text-muted-foreground sm:text-base">
-            I am a dedicated Full-Stack Developer with a strong background in both front-end and back-end development. Specializing in JavaScript, TypeScript, and Node.js, I have successfully designed responsive user interfaces and optimized website performance. My work consistently drives user engagement and boosts sales. With a focus on high performance, security, and scalability, I excel in managing end-to-end development, ensuring every project delivers outstanding results
+          <p className="max-w-[500px] text-xl font-medium leading-7 dark:text-gray-300 text-gray-700 sm:text-base mb-6">
+            Experienced Full Stack Developer with around 3 years of hands-on experience building high-performance web applications. Skilled in modern JavaScript frameworks, cloud technologies, and AI integrations, specializing in E-Commerce and Business solutions. Expert in architecting complex features with top-notch performance and code quality. Proficient in Agile methodologies and cross-functional collaboration, ensuring project success and continuous innovation.
           </p>
+
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center gap-2">
+              <span className="dark:text-white text-black font-semibold">Location:</span>
+              <span className="dark:text-gray-300 text-gray-700">Toronto, ON, Canada</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="dark:text-white text-black font-semibold">Email:</span>
+              <a href="mailto:priyanshuchoudhary0104@gmail.com" className="dark:text-gray-300 text-gray-700 hover:underline">
+                priyanshuchoudhary0104@gmail.com
+              </a>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="dark:text-white text-black font-semibold">LinkedIn:</span>
+              <a href="https://www.linkedin.com/in/priyanshu0209" target="_blank" rel="noopener noreferrer" className="dark:text-gray-300 text-gray-700 hover:underline">
+                linkedin.com/in/priyanshu0209
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
+      </motion.div>
       {/* <div className="img-side">
         <img
           src="https://stefantopalovicdev.vercel.app/static/media/working-emoji.c5325f52b5be329995a5.png"
