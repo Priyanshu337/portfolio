@@ -38,7 +38,7 @@ export default function About() {
               <Mail className="size-6 text-neutral-500 dark:text-neutral-400" />
               <div>
                 <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">Email</p>
-                <p className="text-sm text-neutral-900 dark:text-neutral-100">priyanshu@example.com</p>
+                <p className="text-sm text-neutral-900 dark:text-neutral-100">priyanshuchoudhary0104@gmail.com</p>
               </div>
             </motion.div>
             <motion.div
