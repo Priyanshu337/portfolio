@@ -34,7 +34,7 @@ export default function IndexPage() {
                   rel="noreferrer"
                   target="_blank"
                   title="Github Profile"
-                  className="text-blue-600 hover:text-[#147efb] focus:text-[#147efb] active:text-blue-700 dark:text-blue-400 dark:hover:text-blue-500 dark:focus:text-blue-500 dark:active:text-blue-600 transition-transform hover:scale-110"
+                  className="text-blue-600 transition-transform hover:scale-110 hover:text-[#147efb] focus:text-[#147efb] active:text-blue-700 dark:text-blue-400 dark:hover:text-blue-500 dark:focus:text-blue-500 dark:active:text-blue-600"
                   href="https://github.com/Priyanshu337"
                 >
                   <FontAwesomeIcon
@@ -49,7 +49,7 @@ export default function IndexPage() {
                   rel="noreferrer"
                   target="_blank"
                   title="LinkedIn Profile"
-                  className="text-blue-600 hover:text-[#147efb] focus:text-[#147efb] active:text-blue-700 dark:text-blue-400 dark:hover:text-blue-500 dark:focus:text-blue-500 dark:active:text-blue-600 transition-transform hover:scale-110"
+                  className="text-blue-600 transition-transform hover:scale-110 hover:text-[#147efb] focus:text-[#147efb] active:text-blue-700 dark:text-blue-400 dark:hover:text-blue-500 dark:focus:text-blue-500 dark:active:text-blue-600"
                   href="https://www.linkedin.com/in/priyanshu0209/"
                 >
                   <FontAwesomeIcon
@@ -64,7 +64,7 @@ export default function IndexPage() {
                   data-te-toggle="tooltip"
                   title="Resume"
                   rel="noreferrer"
-                  className="text-blue-600 hover:text-[#147efb] focus:text-[#147efb] active:text-blue-700 dark:text-blue-400 dark:hover:text-blue-500 dark:focus:text-blue-500 dark:active:text-blue-600 transition-transform hover:scale-110"
+                  className="text-blue-600 transition-transform hover:scale-110 hover:text-[#147efb] focus:text-[#147efb] active:text-blue-700 dark:text-blue-400 dark:hover:text-blue-500 dark:focus:text-blue-500 dark:active:text-blue-600"
                   target="_blank"
                   href="https://docs.google.com/document/d/1VXBUyVZzisyPiO-cOXJeq9I4j7v5y3ZKFrR7En6_zok/edit"
                 >
@@ -78,7 +78,7 @@ export default function IndexPage() {
               </div>
             </div>
           </section>
-          <div className="w-[50%] flex justify-center">
+          <div className="flex w-1/2 justify-center">
             <div className="hero-img" />
           </div>
         </div>

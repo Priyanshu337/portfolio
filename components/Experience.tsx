@@ -27,7 +27,7 @@ const experiences = [
     company: "Outlier AI",
     role: "AI Trainee",
     period: "February 2024 - Present",
-    location: "Remote",
+    location: "San Fransisco, CA, US (Remote)",
     description: "Working on AI model training and prompt engineering.",
     link: "https://outlier.ai/",
     achievements: [
@@ -71,7 +71,7 @@ export default function Experience() {
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4">
-                      <Briefcase className="h-6 w-6 text-neutral-500 dark:text-neutral-400" />
+                      <Briefcase className="size-6 text-neutral-500 dark:text-neutral-400" />
                       <h3 className="text-xl font-bold">{experience.company}</h3>
                     </div>
                     <motion.a
@@ -82,20 +82,20 @@ export default function Experience() {
                       whileTap={{ scale: 0.95 }}
                       className="flex items-center space-x-2 text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
                     >
-                      <ExternalLink className="h-5 w-5" />
+                      <ExternalLink className="size-5" />
                       <span>Visit</span>
                     </motion.a>
                   </div>
 
                   <div className="flex items-center space-x-4">
                     <div className="flex items-center space-x-2">
-                      <Calendar className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
+                      <Calendar className="size-5 text-neutral-500 dark:text-neutral-400" />
                       <span className="text-neutral-600 dark:text-neutral-300">
                         {experience.period}
                       </span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <MapPin className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
+                      <MapPin className="size-5 text-neutral-500 dark:text-neutral-400" />
                       <span className="text-neutral-600 dark:text-neutral-300">
                         {experience.location}
                       </span>
@@ -151,16 +151,16 @@ function GetOutlierDetails() {
         whileHover={{ scale: 1.02 }}
         transition={{ duration: 0.3 }}
         onClick={() => redirection("https://outlier.ai/")}
-        className="text-side flex h-fit cursor-pointer flex-col rounded-lg shadow-md dark:shadow-lg-invert md:flex-row p-5 border dark:border-neutral-800 border-neutral-200 transition duration-300 ease-in-out hover:dark:border-white/20 hover:border-black/20 hover:shadow-xl dark:hover:shadow-white/5 hover:shadow-black/5"
+        className="text-side flex h-fit cursor-pointer flex-col rounded-lg border border-neutral-200 p-5 shadow-md transition duration-300 ease-in-out hover:border-black/20 hover:shadow-xl hover:shadow-black/5 dark:border-neutral-800 dark:shadow-lg-invert hover:dark:border-white/20 dark:hover:shadow-white/5 md:flex-row"
       >
         <div className="flex flex-col justify-start p-6" style={{ width: '100%' }}>
-          <h5 className="mb-2 text-center text-xl font-extrabold dark:text-white text-black md:text-left">
+          <h5 className="mb-2 text-center text-xl font-extrabold text-black dark:text-white md:text-left">
             Outlier AI
           </h5>
-          <p className="mb-2 truncate font-extrabold dark:text-gray-300 text-gray-700">
+          <p className="mb-2 truncate font-extrabold text-gray-700 dark:text-gray-300">
             AI Trainee (Feb 2024 - Present)
           </p>
-          <ul className="max-w-[500px] text-xl font-medium leading-7 dark:text-gray-400 text-gray-600 list-disc pl-6 mb-4">
+          <ul className="mb-4 max-w-[500px] list-disc pl-6 text-xl font-medium leading-7 text-gray-600 dark:text-gray-400">
             <li>
               Crafted high-quality prompts for AI models, leveraging NLP principles.
             </li>
@@ -172,9 +172,9 @@ function GetOutlierDetails() {
             </li>
           </ul>
           <div className="stack flex flex-wrap">
-            <p className="dark:bg-gray-800 bg-gray-200 dark:text-gray-200 text-gray-800 px-2 py-1 rounded-md mr-2 mb-2">JavaScript</p>
-            <p className="dark:bg-gray-800 bg-gray-200 dark:text-gray-200 text-gray-800 px-2 py-1 rounded-md mr-2 mb-2">Java</p>
-            <p className="dark:bg-gray-800 bg-gray-200 dark:text-gray-200 text-gray-800 px-2 py-1 rounded-md mr-2 mb-2">Prompt Evaluation</p>
+            <p className="mb-2 mr-2 rounded-md bg-gray-200 px-2 py-1 text-gray-800 dark:bg-gray-800 dark:text-gray-200">JavaScript</p>
+            <p className="mb-2 mr-2 rounded-md bg-gray-200 px-2 py-1 text-gray-800 dark:bg-gray-800 dark:text-gray-200">Java</p>
+            <p className="mb-2 mr-2 rounded-md bg-gray-200 px-2 py-1 text-gray-800 dark:bg-gray-800 dark:text-gray-200">Prompt Evaluation</p>
           </div>
         </div>
       </motion.div>
@@ -183,13 +183,13 @@ function GetOutlierDetails() {
 }
 
 
-function GetLazzifyDetails() {
+function GetCloudmateDetails() {
   return (
 
-    <section className="flex-column border-1 m-6 flex h-auto items-center justify-center dark:shadow-lg-invert bg-white dark:bg-black">
+    <section className="flex-column border-1 m-6 flex h-auto items-center justify-center bg-white dark:bg-black dark:shadow-lg-invert">
       <div
         onClick={() => redirection("https://www.lazzify.com/")}
-        className="text-side flex  h-fit cursor-pointer flex-row rounded-lg shadow-md md:flex-row p-5 border border-transparent transition duration-300 ease-in-out hover:border-[#147efb] hover:shadow-xl"
+        className="text-side flex  h-fit cursor-pointer flex-row rounded-lg border border-transparent p-5 shadow-md transition duration-300 ease-in-out hover:border-[#147efb] hover:shadow-xl md:flex-row"
       >
 
         <div className="flex flex-col justify-start p-6" style={{ width: '100%' }}>
@@ -199,8 +199,8 @@ function GetLazzifyDetails() {
           <p className="mb-2 truncate font-extrabold text-gray-700 dark:text-gray-300">
             Software Engineer (05/21 - 08/22)
           </p>
-          <a className="max-w-[500px] text-l font-medium leading-7 text-gray-600 dark:text-gray-400">
-            <ul className="list-disc pl-6 mb-4">
+          <a className="text-l max-w-[500px] font-medium leading-7 text-gray-600 dark:text-gray-400">
+            <ul className="mb-4 list-disc pl-6">
               <li>Delivered 30+ successful deployments, developed 20+ features and resolved 50+ bugs.</li>
               <li>Creating a technical solution that meets the functional requirements and Wireframes of a system.
 
@@ -229,11 +229,11 @@ function GetLazzifyDetails() {
             </ul>
           </a>
           <div className="stack flex flex-wrap dark:text-white">
-            <p className="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-2 py-1 rounded-md mr-2 mb-2">React</p>
-            <p className="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-2 py-1 rounded-md mr-2 mb-2">Javascript</p>
+            <p className="mb-2 mr-2 rounded-md bg-gray-200 px-2 py-1 text-gray-800 dark:bg-gray-800 dark:text-gray-200">React</p>
+            <p className="mb-2 mr-2 rounded-md bg-gray-200 px-2 py-1 text-gray-800 dark:bg-gray-800 dark:text-gray-200">Javascript</p>
 
-            <p className="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-2 py-1 rounded-md mr-2 mb-2">TypeScript</p>
-            <p className="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-2 py-1 rounded-md mr-2 mb-2">SQL</p>
+            <p className="mb-2 mr-2 rounded-md bg-gray-200 px-2 py-1 text-gray-800 dark:bg-gray-800 dark:text-gray-200">TypeScript</p>
+            <p className="mb-2 mr-2 rounded-md bg-gray-200 px-2 py-1 text-gray-800 dark:bg-gray-800 dark:text-gray-200">SQL</p>
           </div>
         </div>
       </div>
@@ -241,4 +241,4 @@ function GetLazzifyDetails() {
   );
 }
 
-export { GetOutlierDetails, GetLazzifyDetails };
+export { GetOutlierDetails, GetCloudmateDetails };
