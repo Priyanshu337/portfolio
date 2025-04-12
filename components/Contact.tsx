@@ -5,7 +5,7 @@ import { faMapLocationDot, faEnvelopeOpenText } from '@fortawesome/free-solid-sv
 
 export default function Contact() {
   return (
-    <section className="mt-[5rem] flex flex-col items-center justify-center min-h-screen">
+    <section className="mt-20 p-6 flex flex-col justify-center items-center min-h-screen bg-gradient-to-b dark:from-neutral-950 dark:to-black from-neutral-50 to-white">
       <div className="w-full max-w-4xl p-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-extrabold text-[#147efb] dark:text-neutral-50">

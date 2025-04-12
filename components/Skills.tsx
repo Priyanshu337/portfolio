@@ -1,118 +1,300 @@
 "use client"
-
-import { motion } from "framer-motion"
-
-const technicalSkills = [
-    {
-        category: "Frontend",
-        skills: ["React.js", "Next.js", "TypeScript", "JavaScript", "HTML", "CSS", "Tailwind", "ShadCN UI"]
-    },
-    {
-        category: "Backend",
-        skills: ["Node.js", "Express.js", "REST API", "GraphQL API", "MongoDB", "No-SQL", "ORM tools"]
-    },
-    {
-        category: "Cloud & DevOps",
-        skills: ["AWS EC2", "Lambda", "S3", "IAM", "VPC", "Amplify", "API Gateway", "WAF", "CloudWatch", "Dynamo DB", "Elastic Search"]
-    },
-    {
-        category: "AI & Tools",
-        skills: ["Langchain", "Vector Embeddings", "Transcriber", "Synthesizer", "PineConeDB", "OpenAI", "Docker", "Redis"]
-    }
-]
-
-const secondarySkills = [
-    "Agile", "Jira", "Scrum", "Sprint"
-]
+import { motion } from "framer-motion";
+import { Code, Cpu, Shield } from "lucide-react";
 
 const designPatterns = [
-    "Singleton", "Factory", "Abstract Factory", "Builder", "Prototype", "Adapter",
-    "Bridge", "Composite", "Decorator", "Facade", "FlyWeight", "Proxy", "Observer"
+    { name: "Singleton", icon: "1️⃣" },
+    { name: "Factory", icon: "🏭" },
+    { name: "Abstract Factory", icon: "🏗️" },
+    { name: "Builder", icon: "🔧" },
+    { name: "Prototype", icon: "🧬" },
+    { name: "Adapter", icon: "🔌" },
+    { name: "Bridge", icon: "🌉" },
+    { name: "Composite", icon: "🌿" },
+    { name: "Decorator", icon: "✨" },
+    { name: "Facade", icon: "🏠" },
+    { name: "Flyweight", icon: "🪶" },
+    { name: "Proxy", icon: "🛡️" },
+    { name: "Observer", icon: "👀" },
+];
+const technicalSkills = [
+    { name: "React.js", icon: "⚛️" },
+    { name: "Next.js", icon: "🚀" },
+    { name: "TypeScript", icon: "📘" },
+    { name: "JavaScript", icon: "💻" },
+    { name: "HTML", icon: "📄" },
+    { name: "CSS", icon: "🎨" },
+    { name: "Tailwind", icon: "💨" },
+    { name: "ShadCN UI", icon: "🧩" },
+    { name: "Node.js", icon: "🟢" },
+    { name: "Express.js", icon: "🚏" },
+    { name: "REST API", icon: "🔌" },
+    { name: "GraphQL API", icon: "🕸️" },
+    { name: "MongoDB", icon: "🍃" },
+    { name: "NoSQL", icon: "🧮" },
+    { name: "ORM Tools", icon: "🧱" },
+    { name: "AWS EC2", icon: "🖥️" },
+    { name: "AWS Lambda", icon: "🧬" },
+    { name: "AWS S3", icon: "🗂️" },
+    { name: "AWS IAM", icon: "🛡️" },
+    { name: "AWS VPC", icon: "🌐" },
+    { name: "AWS Amplify", icon: "📢" },
+    { name: "API Gateway", icon: "🛣️" },
+    { name: "AWS WAF", icon: "🧱" },
+    { name: "CloudWatch", icon: "📈" },
+    { name: "DynamoDB", icon: "⚙️" },
+    { name: "ElasticSearch", icon: "🔍" },
+    { name: "Langchain", icon: "🧠" },
+    { name: "Vector Embeddings", icon: "🧲" },
+    { name: "Transcriber", icon: "🎙️" },
+    { name: "Synthesizer", icon: "🎧" },
+    { name: "PineConeDB", icon: "🌲" },
+    { name: "OpenAI", icon: "🤖" },
+    { name: "Docker", icon: "🐳" },
+    { name: "Redis", icon: "🟥" },
+    { name: "Git", icon: "🔧" },
+    { name: "Version Controlling", icon: "📂" },
+];
+
+const secondarySkills = [
+    { name: "Agile/Scrum", icon: "🔄" },
+    { name: "CI/CD", icon: "⚡" },
+    { name: "REST APIs", icon: "🌐" },
+    { name: "GraphQL", icon: "📊" },
+    { name: "Microservices", icon: "🧩" },
+    { name: "Testing", icon: "✅" },
 ]
 
-export default function Skills() {
+export default function SkillsSection() {
     return (
-        <section className="mt-[5rem] p-6 flex flex-col justify-center items-center min-h-screen bg-gradient-to-b dark:from-neutral-950 dark:to-black from-neutral-50 to-white">
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="w-full max-w-6xl"
-            >
-                <h1 className="text-center font-extrabold text-4xl dark:text-white text-black mb-12">
-                    Technical Skills
-                </h1>
+        <section className="relative w-full py-12 md:py-24 lg:py-32">
+            <div className="container px-4 md:px-6">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="mx-auto max-w-3xl space-y-6"
+                >
+                    <div className="space-y-2 text-center">
+                        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                            Skills & Expertise
+                        </h2>
+                        <p className="text-neutral-500 dark:text-neutral-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                            Technologies and methodologies I work with
+                        </p>
+                    </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {technicalSkills.map((category, index) => (
+                    <div className="space-y-6">
+                        {/* Technical Skills */}
                         <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            viewport={{ once: true }}
-                            className="dark:bg-white/10 bg-white/80 backdrop-blur-lg rounded-xl p-6 border dark:border-white/20 border-neutral-200 hover:dark:border-white/40 hover:border-black/40 transition-all duration-300 hover:scale-[1.02] shadow-lg dark:shadow-white/5 shadow-black/5"
+                            whileHover={{ scale: 1.02 }}
+                            className="rounded-lg border border-neutral-200 p-6 dark:border-neutral-800"
                         >
-                            <h2 className="text-2xl font-bold dark:text-white text-black mb-4">{category.category}</h2>
-                            <div className="flex flex-wrap gap-2">
-                                {category.skills.map((skill, skillIndex) => (
-                                    <span
-                                        key={skillIndex}
-                                        className="px-3 py-1 dark:bg-white/10 bg-gray-200 rounded-full text-sm dark:text-white/80 text-gray-800"
+                            <div className="flex items-center space-x-2">
+                                <Code className="size-6 text-neutral-500 dark:text-neutral-400" />
+                                <h3 className="text-xl font-bold">Technical Skills</h3>
+                            </div>
+                            <div className="mt-4 flex flex-wrap gap-2">
+                                {technicalSkills.map((skill) => (
+                                    <motion.div
+                                        key={skill.name}
+                                        whileHover={{ scale: 1.05 }}
+                                        className="flex items-center space-x-2 rounded-md bg-neutral-100 p-2 dark:bg-neutral-800"
                                     >
-                                        {skill}
-                                    </span>
+                                        <span className="text-lg">{skill.icon}</span>
+                                        <span className="text-sm">{skill.name}</span>
+                                    </motion.div>
                                 ))}
                             </div>
                         </motion.div>
-                    ))}
-                </div>
 
-                <div className="mt-12">
-                    <h2 className="text-2xl font-bold dark:text-white text-black mb-6 text-center">Design Patterns</h2>
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.6 }}
-                        viewport={{ once: true }}
-                        className="dark:bg-white/10 bg-white/80 backdrop-blur-lg rounded-xl p-6 border dark:border-white/20 border-neutral-200 hover:dark:border-white/40 hover:border-black/40 transition-all duration-300 hover:scale-[1.02] shadow-lg dark:shadow-white/5 shadow-black/5"
-                    >
-                        <div className="flex flex-wrap gap-2 justify-center">
-                            {designPatterns.map((pattern, index) => (
-                                <span
-                                    key={index}
-                                    className="px-3 py-1 dark:bg-white/10 bg-gray-200 rounded-full text-sm dark:text-white/80 text-gray-800"
-                                >
-                                    {pattern}
-                                </span>
-                            ))}
-                        </div>
-                    </motion.div>
-                </div>
+                        {/* Secondary Skills */}
+                        <motion.div
+                            whileHover={{ scale: 1.02 }}
+                            className="rounded-lg border border-neutral-200 p-6 dark:border-neutral-800"
+                        >
+                            <div className="flex items-center space-x-2">
+                                <Cpu className="size-6 text-neutral-500 dark:text-neutral-400" />
+                                <h3 className="text-xl font-bold">Secondary Skills</h3>
+                            </div>
+                            <div className="mt-4 flex flex-wrap gap-2">
+                                {secondarySkills.map((skill) => (
+                                    <motion.div
+                                        key={skill.name}
+                                        whileHover={{ scale: 1.05 }}
+                                        className="flex items-center space-x-2 rounded-md bg-neutral-100 p-2 dark:bg-neutral-800"
+                                    >
+                                        <span className="text-lg">{skill.icon}</span>
+                                        <span className="text-sm">{skill.name}</span>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </motion.div>
 
-                <div className="mt-12">
-                    <h2 className="text-2xl font-bold dark:text-white text-black mb-6 text-center">Secondary Skills</h2>
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: 0.8 }}
-                        viewport={{ once: true }}
-                        className="dark:bg-white/10 bg-white/80 backdrop-blur-lg rounded-xl p-6 border dark:border-white/20 border-neutral-200 hover:dark:border-white/40 hover:border-black/40 transition-all duration-300 hover:scale-[1.02] shadow-lg dark:shadow-white/5 shadow-black/5"
-                    >
-                        <div className="flex flex-wrap gap-2 justify-center">
-                            {secondarySkills.map((skill, index) => (
-                                <span
-                                    key={index}
-                                    className="px-3 py-1 dark:bg-white/10 bg-gray-200 rounded-full text-sm dark:text-white/80 text-gray-800"
-                                >
-                                    {skill}
-                                </span>
-                            ))}
-                        </div>
-                    </motion.div>
-                </div>
-            </motion.div>
+                        {/* Design Patterns */}
+                        <motion.div
+                            whileHover={{ scale: 1.02 }}
+                            className="rounded-lg border border-neutral-200 p-6 dark:border-neutral-800"
+                        >
+                            <div className="flex items-center space-x-2">
+                                <Shield className="size-6 text-neutral-500 dark:text-neutral-400" />
+                                <h3 className="text-xl font-bold">Design Patterns</h3>
+                            </div>
+                            <div className="mt-4 flex flex-wrap gap-2">
+                                {designPatterns.map((pattern) => (
+                                    <motion.div
+                                        key={pattern.name}
+                                        whileHover={{ scale: 1.05 }}
+                                        className="flex items-center space-x-2 rounded-md bg-neutral-100 p-2 dark:bg-neutral-800"
+                                    >
+                                        <span className="text-lg">{pattern.icon}</span>
+                                        <span className="text-sm">{pattern.name}</span>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </motion.div>
+                    </div>
+                </motion.div>
+            </div>
         </section>
-    )
-} 
+    );
+}
+
+
+
+
+
+// "use client"
+
+// import { motion } from "framer-motion"
+// import { Code, Database, Cpu, Layout, GitBranch, Shield } from "lucide-react"
+
+// const technicalSkills = [
+//     { name: "JavaScript", icon: "💻" },
+//     { name: "TypeScript", icon: "📘" },
+//     { name: "React", icon: "⚛️" },
+//     { name: "Next.js", icon: "🚀" },
+//     { name: "Node.js", icon: "🟢" },
+//     { name: "SQL", icon: "🗄️" },
+//     { name: "MongoDB", icon: "🍃" },
+//     { name: "AWS", icon: "☁️" },
+//     { name: "Docker", icon: "🐳" },
+//     { name: "Git", icon: "🔧" },
+// ]
+
+// const secondarySkills = [
+//     { name: "Agile/Scrum", icon: "🔄" },
+//     { name: "CI/CD", icon: "⚡" },
+//     { name: "REST APIs", icon: "🌐" },
+//     { name: "GraphQL", icon: "📊" },
+//     { name: "Microservices", icon: "🧩" },
+//     { name: "Testing", icon: "✅" },
+// ]
+
+// const designPatterns = [
+//     { name: "Singleton", icon: "1️⃣" },
+//     { name: "Factory", icon: "🏭" },
+//     { name: "Abstract Factory", icon: "🏗️" },
+//     { name: "Builder", icon: "🔧" },
+//     { name: "Prototype", icon: "🧬" },
+//     { name: "Adapter", icon: "🔌" },
+//     { name: "Bridge", icon: "🌉" },
+//     { name: "Composite", icon: "🌿" },
+//     { name: "Decorator", icon: "✨" },
+//     { name: "Facade", icon: "🏠" },
+//     { name: "Flyweight", icon: "🪶" },
+//     { name: "Proxy", icon: "🛡️" },
+//     { name: "Observer", icon: "👀" }
+// ];
+
+// export default function Skills() {
+//     return (
+//         <section className="relative w-full py-12 md:py-24 lg:py-32">
+//             <div className="container px-4 md:px-6">
+//                 <motion.div
+//                     initial={{ opacity: 0, y: 20 }}
+//                     animate={{ opacity: 1, y: 0 }}
+//                     transition={{ duration: 0.5 }}
+//                     className="mx-auto max-w-3xl space-y-6"
+//                 >
+//                     <div className="space-y-2 text-center">
+//                         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+//                             Skills & Expertise
+//                         </h2>
+//                         <p className="text-neutral-500 dark:text-neutral-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+//                             Technologies and methodologies I work with
+//                         </p>
+//                     </div>
+
+//                     <div className="grid gap-6 md:grid-cols-3">
+//                         <motion.div
+//                             whileHover={{ scale: 1.02 }}
+//                             className="rounded-lg border border-neutral-200 p-6 dark:border-neutral-800"
+//                         >
+//                             <div className="flex items-center space-x-2">
+//                                 <Code className="size-6 text-neutral-500 dark:text-neutral-400" />
+//                                 <h3 className="text-xl font-bold">Technical Skills</h3>
+//                             </div>
+//                             <div className="mt-4 grid grid-cols-2 gap-2">
+//                                 {technicalSkills.map((skill) => (
+//                                     <motion.div
+//                                         key={skill.name}
+//                                         whileHover={{ scale: 1.05 }}
+//                                         className="flex items-center space-x-2 rounded-md bg-neutral-100 p-2 dark:bg-neutral-800"
+//                                     >
+//                                         <span className="text-lg">{skill.icon}</span>
+//                                         <span className="text-sm">{skill.name}</span>
+//                                     </motion.div>
+//                                 ))}
+//                             </div>
+//                         </motion.div>
+
+//                         <motion.div
+//                             whileHover={{ scale: 1.02 }}
+//                             className="rounded-lg border border-neutral-200 p-6 dark:border-neutral-800"
+//                         >
+//                             <div className="flex items-center space-x-2">
+//                                 <Cpu className="size-6 text-neutral-500 dark:text-neutral-400" />
+//                                 <h3 className="text-xl font-bold">Secondary Skills</h3>
+//                             </div>
+//                             <div className="mt-4 grid grid-cols-2 gap-2">
+//                                 {secondarySkills.map((skill) => (
+//                                     <motion.div
+//                                         key={skill.name}
+//                                         whileHover={{ scale: 1.05 }}
+//                                         className="flex items-center space-x-2 rounded-md bg-neutral-100 p-2 dark:bg-neutral-800"
+//                                     >
+//                                         <span className="text-lg">{skill.icon}</span>
+//                                         <span className="text-sm">{skill.name}</span>
+//                                     </motion.div>
+//                                 ))}
+//                             </div>
+//                         </motion.div>
+
+//                         <motion.div
+//                             whileHover={{ scale: 1.02 }}
+//                             className="rounded-lg border border-neutral-200 p-6 dark:border-neutral-800"
+//                         >
+//                             <div className="flex items-center space-x-2">
+//                                 <Shield className="size-6 text-neutral-500 dark:text-neutral-400" />
+//                                 <h3 className="text-xl font-bold">Design Patterns</h3>
+//                             </div>
+//                             <div className="mt-4 grid grid-cols-2 gap-2">
+//                                 {designPatterns.map((pattern) => (
+//                                     <motion.div
+//                                         key={pattern.name}
+//                                         whileHover={{ scale: 1.05 }}
+//                                         className="flex items-center space-x-2 rounded-md bg-neutral-100 p-2 dark:bg-neutral-800"
+//                                     >
+//                                         <span className="text-lg">{pattern.icon}</span>
+//                                         <span className="text-sm">{pattern.name}</span>
+//                                     </motion.div>
+//                                 ))}
+//                             </div>
+//                         </motion.div>
+//                     </div>
+//                 </motion.div>
+//             </div>
+//         </section>
+//     )
+// } 

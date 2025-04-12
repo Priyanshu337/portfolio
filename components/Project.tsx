@@ -1,132 +1,149 @@
 "use client"
 
-import Image from 'next/image';
-import * as HoverCard from '@radix-ui/react-hover-card';
-import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion"
+import { Github, ExternalLink } from "lucide-react"
 
-interface Project {
-    title: string;
-    description: string;
-    githubUrl: string;
-    technologies: string[];
-    imageUrl?: string;
-    period?: string;
-}
-
-const projects: Project[] = [
+const projects = [
     {
         title: "Figma Clone",
-        description: "Developed a Figma clone application for collaborative UI design and interaction. Built with Next.js and TypeScript, leveraging Liveblock for real-time collaboration. Implemented features like multi-user messaging, reaction emojis, and interactive design tools. Enabled users to collaboratively build and refine UI concepts in real time.",
-        githubUrl: "https://github.com/Priyanshu337/FigmaClone",
+        description: "Developed a Figma clone application for collaborative UI design and interaction. Built with Next.js and TypeScript, leveraging Liveblock for real-time collaboration. Implemented features like multi-user messaging, reaction emojis, and interactive design tools.",
         technologies: ["Next.js", "TypeScript", "Liveblock", "Tailwind CSS"],
-        period: "Currently Working"
+        github: "https://github.com/Priyanshu337/FigmaClone",
+        demo: "#",
+        features: [
+            "Real-time collaboration",
+            "Multi-user messaging",
+            "Reaction emojis",
+            "Interactive design tools",
+        ],
     },
     {
         title: "EaseAppMD",
-        description: "Built a web app for scheduling doctor appointments, designing UI in Figma for React implementation. Managed backend integration using .NET and MySQL, with deployment via Azure DevOps. Implemented user authentication and role-based access control. Created responsive design for optimal viewing across devices.",
-        githubUrl: "#",
+        description: "Built a web app for scheduling doctor appointments, designing UI in Figma for React implementation. Managed backend integration using .NET and MySQL, with deployment via Azure DevOps.",
         technologies: ["React", ".NET", "MySQL", "Azure DevOps"],
-        period: "September 2023 - December 2023"
+        github: "#",
+        demo: "#",
+        features: [
+            "Doctor appointment scheduling",
+            "User authentication",
+            "Role-based access control",
+            "Responsive design",
+        ],
     },
     {
         title: "Wear'e",
-        description: "Developed MERN stack e-commerce project built on Redux state management library. Implemented Stripe payment feature using Stripe API. Used MongoDB for data storage. Created responsive UI/UX for seamless shopping experience.",
-        githubUrl: "#",
+        description: "Developed MERN stack e-commerce project built on Redux state management library. Implemented Stripe payment feature using Stripe API. Used MongoDB for data storage.",
         technologies: ["MERN Stack", "Redux", "Stripe", "MongoDB"],
-        period: "April 2023 - August 2023"
-    }
-];
+        github: "#",
+        demo: "#",
+        features: [
+            "E-commerce functionality",
+            "Stripe payment integration",
+            "User authentication",
+            "Product management",
+        ],
+    },
+]
 
-export default function Projects() {
-    const [hoveredProject, setHoveredProject] = useState<number | null>(null);
-
+export default function Project() {
     return (
-        <section className="mt-[10rem] p-6 flex flex-col justify-center items-center min-h-screen bg-gradient-to-b dark:from-neutral-950 dark:to-black from-neutral-50 to-white">
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="w-full max-w-6xl"
-            >
-                <h1 className="text-center font-extrabold text-4xl dark:text-white text-black mb-12">
-                    Featured Projects
-                </h1>
+        <section className="relative w-full py-12 md:py-24 lg:py-32">
+            <div className="container px-4 md:px-6">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="mx-auto max-w-3xl space-y-6"
+                >
+                    <div className="space-y-2 text-center">
+                        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                            Featured Projects
+                        </h2>
+                        <p className="text-neutral-500 dark:text-neutral-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                            A showcase of my recent work and contributions
+                        </p>
+                    </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {projects.map((project, index) => (
-                        <HoverCard.Root key={index} open={hoveredProject === index}>
-                            <HoverCard.Trigger asChild>
-                                <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5, delay: index * 0.2 }}
-                                    viewport={{ once: true }}
-                                    onMouseEnter={() => setHoveredProject(index)}
-                                    onMouseLeave={() => setHoveredProject(null)}
-                                    className="dark:bg-white/10 bg-white/80 backdrop-blur-lg rounded-xl p-6 border dark:border-white/20 border-neutral-200 hover:dark:border-white/40 hover:border-black/40 transition-all duration-300 hover:scale-[1.02] shadow-lg dark:shadow-white/5 shadow-black/5"
-                                >
-                                    <div className="flex flex-col h-full">
-                                        <div className="flex items-start justify-between mb-4">
-                                            <div>
-                                                <h2 className="text-2xl font-bold dark:text-white text-black">{project.title}</h2>
-                                                {project.period && (
-                                                    <p className="text-sm dark:text-gray-400 text-gray-600">{project.period}</p>
-                                                )}
-                                            </div>
-                                            <a
-                                                href={project.githubUrl}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="hover:opacity-80 transition-opacity"
+                    <div className="grid gap-8 md:grid-cols-2">
+                        {projects.map((project, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                viewport={{ once: true }}
+                                whileHover={{ scale: 1.02 }}
+                                className="group relative overflow-hidden rounded-lg border border-neutral-200 p-6 dark:border-neutral-800"
+                            >
+                                <div className="space-y-4">
+                                    <h3 className="text-xl font-bold">{project.title}</h3>
+                                    <p className="text-neutral-600 dark:text-neutral-300">
+                                        {project.description}
+                                    </p>
+
+                                    <div className="flex flex-wrap gap-2">
+                                        {project.technologies.map((tech, idx) => (
+                                            <motion.span
+                                                key={idx}
+                                                whileHover={{ scale: 1.05 }}
+                                                className="rounded-full bg-neutral-100 px-3 py-1 text-sm dark:bg-neutral-800"
                                             >
-                                                <Image
-                                                    src="/github-mark.svg"
-                                                    alt="GitHub Logo"
-                                                    width={24}
-                                                    height={24}
-                                                    className="dark:invert"
-                                                />
-                                            </a>
-                                        </div>
+                                                {tech}
+                                            </motion.span>
+                                        ))}
+                                    </div>
 
-                                        <p className="dark:text-gray-300 text-gray-700 mb-4 flex-grow">
-                                            {project.description}
-                                        </p>
-
-                                        <div className="flex flex-wrap gap-2 mt-auto">
-                                            {project.technologies.map((tech, techIndex) => (
-                                                <span
-                                                    key={techIndex}
-                                                    className="px-3 py-1 dark:bg-white/10 bg-gray-200 rounded-full text-sm dark:text-white/80 text-gray-800"
+                                    <div>
+                                        <h4 className="font-semibold text-neutral-900 dark:text-neutral-100">
+                                            Key Features:
+                                        </h4>
+                                        <ul className="mt-2 list-inside list-disc space-y-1 text-neutral-600 dark:text-neutral-300">
+                                            {project.features.map((feature, idx) => (
+                                                <motion.li
+                                                    key={idx}
+                                                    initial={{ opacity: 0, x: -20 }}
+                                                    whileInView={{ opacity: 1, x: 0 }}
+                                                    transition={{ duration: 0.3, delay: idx * 0.1 }}
+                                                    viewport={{ once: true }}
                                                 >
-                                                    {tech}
-                                                </span>
+                                                    {feature}
+                                                </motion.li>
                                             ))}
-                                        </div>
+                                        </ul>
                                     </div>
-                                </motion.div>
-                            </HoverCard.Trigger>
 
-                            <HoverCard.Portal>
-                                <HoverCard.Content
-                                    className="dark:bg-white/20 bg-white/80 backdrop-blur-lg rounded-lg p-4 shadow-lg dark:border-white/30 border-neutral-200"
-                                    sideOffset={5}
-                                >
-                                    <div className="dark:text-white text-black">
-                                        <h3 className="font-bold mb-2">Project Details</h3>
-                                        <p className="text-sm dark:text-white/80 text-gray-700">{project.description}</p>
+                                    <div className="flex items-center space-x-4">
+                                        <motion.a
+                                            href={project.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            whileHover={{ scale: 1.1 }}
+                                            whileTap={{ scale: 0.95 }}
+                                            className="flex items-center space-x-2 text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+                                        >
+                                            <Github className="h-5 w-5" />
+                                            <span>GitHub</span>
+                                        </motion.a>
+                                        <motion.a
+                                            href={project.demo}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            whileHover={{ scale: 1.1 }}
+                                            whileTap={{ scale: 0.95 }}
+                                            className="flex items-center space-x-2 text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+                                        >
+                                            <ExternalLink className="h-5 w-5" />
+                                            <span>Demo</span>
+                                        </motion.a>
                                     </div>
-                                    <HoverCard.Arrow className="dark:fill-white/20 fill-black/20" />
-                                </HoverCard.Content>
-                            </HoverCard.Portal>
-                        </HoverCard.Root>
-                    ))}
-                </div>
-            </motion.div>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </motion.div>
+            </div>
         </section>
-    );
+    )
 }
 
 

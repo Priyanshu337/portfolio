@@ -11,7 +11,7 @@ export default function Social() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="fixed left-0 top-1/2 z-50 -translate-y-1/2 transform"
+            className="fixed left-0 top-1/2 z-50 -translate-y-1/2"
         >
             <div className="flex flex-col items-center gap-4 rounded-r-lg bg-white/80 p-2 shadow-lg dark:bg-white/10">
                 <a

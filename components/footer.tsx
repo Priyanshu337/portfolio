@@ -8,7 +8,7 @@ export default function footer() {
           <a
             href="https://www.linkedin.com/in/priyanshu0209"
             type="button"
-            className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+            className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black/5 focus:outline-none focus:ring-0 size-9"
             data-te-ripple-init
             data-te-ripple-color="light"
           >
@@ -25,7 +25,7 @@ export default function footer() {
           <a
             href="https://github.com/Priyanshu337"
             type="button"
-            className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0"
+            className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black/5 focus:outline-none focus:ring-0 size-9"
             data-te-ripple-init
             data-te-ripple-color="light"
           >

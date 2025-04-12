@@ -1,57 +1,120 @@
 "use client"
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion"
+import { GraduationCap, Calendar, MapPin, Award } from "lucide-react"
 
 const education = [
     {
-        title: "Mobile Solution Development",
+        degree: "Mobile Solution Development",
         institution: "Conestoga College",
         location: "Waterloo, ON",
         period: "2022 - 2024",
-        description: "Specialized in mobile application development, focusing on modern web technologies and cloud solutions."
+        gpa: "3.3/4.0",
+        description: "Specialized in Mobile and Web application development with a focus on modern technologies and best practices.",
+        achievements: [
+            "Published research paper on mobile app security",
+            "Led mobile development team in capstone project",
+        ],
     },
     {
-        title: "Bachelor in Computer Application",
+        degree: "Bachelor in Computer Application",
         institution: "GLS University",
         location: "Ahmedabad, India",
         period: "2018 - 2021",
-        description: "Focused on software development fundamentals, database management, and web technologies."
-    }
-];
+        gpa: "3.4/4.0",
+        description: "Focused on software development fundamentals and modern programming practices.",
+        achievements: [
+            "Won inter-university hackathon",
+            "Developed multiple web applications for university projects",
+        ],
+    },
+]
 
 export default function Education() {
     return (
-        <section className="mt-[10rem] p-6 flex flex-col justify-center items-center min-h-screen bg-gradient-to-b dark:from-neutral-950 dark:to-black from-neutral-50 to-white">
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: true }}
-                className="w-full max-w-6xl"
-            >
-                <h1 className="text-center font-extrabold text-4xl dark:text-white text-black mb-12">
-                    Education
-                </h1>
+        <section className="relative w-full py-12 md:py-24 lg:py-32">
+            <div className="container px-4 md:px-6">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="mx-auto max-w-3xl space-y-6"
+                >
+                    <div className="space-y-2 text-center">
+                        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                            Education
+                        </h2>
+                        <p className="text-neutral-500 dark:text-neutral-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                            My academic journey and achievements
+                        </p>
+                    </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {education.map((edu, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.5, delay: index * 0.2 }}
-                            viewport={{ once: true }}
-                            className="dark:bg-white/10 bg-white/80 backdrop-blur-lg rounded-xl p-6 border dark:border-white/20 border-neutral-200 hover:dark:border-white/40 hover:border-black/40 transition-all duration-300 hover:scale-[1.02] shadow-lg dark:shadow-white/5 shadow-black/5"
-                        >
-                            <h2 className="text-2xl font-bold dark:text-white text-black mb-2">{edu.institution}</h2>
-                            <p className="dark:text-gray-300 text-gray-700 mb-2">{edu.location}</p>
-                            <p className="dark:text-gray-400 text-gray-600 mb-4">{edu.title}</p>
-                            <p className="text-sm dark:text-gray-400 text-gray-600">{edu.period}</p>
-                            <p className="dark:text-gray-300 text-gray-700 mt-4">{edu.description}</p>
-                        </motion.div>
-                    ))}
-                </div>
-            </motion.div>
+                    <div className="space-y-8">
+                        {education.map((edu, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                viewport={{ once: true }}
+                                whileHover={{ scale: 1.02 }}
+                                className="rounded-lg border border-neutral-200 p-6 dark:border-neutral-800"
+                            >
+                                <div className="space-y-4">
+                                    <div className="flex items-center space-x-4">
+                                        <GraduationCap className="h-6 w-6 text-neutral-500 dark:text-neutral-400" />
+                                        <h3 className="text-xl font-bold">{edu.institution}</h3>
+                                    </div>
+
+                                    <div className="flex items-center space-x-4">
+                                        <div className="flex items-center space-x-2">
+                                            <Calendar className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
+                                            <span className="text-neutral-600 dark:text-neutral-300">
+                                                {edu.period}
+                                            </span>
+                                        </div>
+                                        <div className="flex items-center space-x-2">
+                                            <MapPin className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
+                                            <span className="text-neutral-600 dark:text-neutral-300">
+                                                {edu.location}
+                                            </span>
+                                        </div>
+                                        <div className="flex items-center space-x-2">
+                                            <Award className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
+                                            <span className="text-neutral-600 dark:text-neutral-300">
+                                                GPA: {edu.gpa}
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <p className="text-neutral-600 dark:text-neutral-300">
+                                        {edu.description}
+                                    </p>
+
+                                    <div>
+                                        <h4 className="font-semibold text-neutral-900 dark:text-neutral-100">
+                                            Key Achievements:
+                                        </h4>
+                                        <ul className="mt-2 list-inside list-disc space-y-1 text-neutral-600 dark:text-neutral-300">
+                                            {edu.achievements.map((achievement, idx) => (
+                                                <motion.li
+                                                    key={idx}
+                                                    initial={{ opacity: 0, x: -20 }}
+                                                    whileInView={{ opacity: 1, x: 0 }}
+                                                    transition={{ duration: 0.3, delay: idx * 0.1 }}
+                                                    viewport={{ once: true }}
+                                                >
+                                                    {achievement}
+                                                </motion.li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </motion.div>
+            </div>
         </section>
-    );
+    )
 } 

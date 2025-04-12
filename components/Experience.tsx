@@ -1,151 +1,137 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Image from "next/image"
+import { Briefcase, Calendar, MapPin, ExternalLink } from "lucide-react"
 
-interface Experience {
-  company: string;
-  role: string;
-  location: string;
-  period: string;
-  responsibilities: string[];
-  achievements: string[];
-}
-
-const experiences: Experience[] = [
+const experiences = [
   {
-    company: "Cloudmates Technologies LLP",
-    role: "FullStack Developer",
+    company: "CloudMate Technologies LLP",
+    role: "Full Stack Developer",
+    period: "January 2021 - August 2022, April 2024 - Present",
     location: "Ahmedabad, IN",
-    period: "January 2021 - August 2022 / April 2024 - Present",
-    responsibilities: [
-      "Execute agile development methodologies with focus on sprint velocity and iterative improvements",
-      "Implement domain-driven design patterns based on business requirements",
-      "Develop responsive interfaces using component-based architecture and state management in Next and React JS",
-      "Construct RESTful API endpoints with proper error handling, validation, and security protocols",
-      "Optimize database query performance and implement proper indexing strategies",
-      "Configure AWS infrastructure as code for scalable and reliable deployments",
-      "Implement JWT authentication flows and role-based access control",
-      "Perform systematic debugging and root cause analysis across the technology stack"
-    ],
+    description: "Executed agile development methodologies with focus on sprint velocity and iterative improvements. Implemented domain-driven design patterns based on business requirements.",
+    link: "#",
     achievements: [
       "Designed scalable backend architectures using Node.js (MVC) and Express.js",
-      "Enhanced overall application performance by 25% through frontend optimizations using multiple component libraries",
+      "Enhanced overall application performance by 25% through frontend optimizations",
       "Successfully deployed and managed applications on AWS cloud infrastructure",
       "Implemented secure IAM roles and VPC configurations for robust security",
-      "Built and integrated AI-powered features using OpenAI API and Vector Embeddings"
-    ]
+      "Built and integrated AI-powered features using OpenAI API and Vector Embeddings",
+      "Developed responsive interfaces using component-based architecture in Next.js and React",
+      "Constructed RESTful API endpoints with proper error handling and security protocols",
+      "Optimized database query performance and implemented proper indexing strategies",
+      "Implemented JWT authentication flows and role-based access control"
+    ],
   },
   {
     company: "Outlier AI",
     role: "AI Trainee",
-    location: "Remote",
     period: "February 2024 - Present",
-    responsibilities: [
-      "Training models to generate appropriate responses based on user prompts",
-      "Validating AI responses to ensure they meet the required problem-solving criteria",
-      "Focusing particularly on generating code outputs in languages such as Java, C++, JavaScript, HTML, and CSS",
-      "Participating in regular feedback sessions to enhance model accuracy and response quality"
-    ],
+    location: "Remote",
+    description: "Working on AI model training and prompt engineering.",
+    link: "https://outlier.ai/",
     achievements: [
-      "Improved model accuracy through systematic validation and feedback",
-      "Enhanced code generation capabilities across multiple programming languages",
-      "Contributed to the development of more accurate and context-aware AI responses"
-    ]
-  }
-];
-
-const education = [
-  {
-    title: "Master of Science in Computer Science",
-    institution: "University of Texas at Arlington",
-    location: "Arlington, TX",
-    period: "August 2022 - May 2024",
-    gpa: "3.8/4.0",
-    description: "Specialized in Software Engineering and Database Systems. Relevant coursework includes Advanced Software Engineering, Database Systems, and Web Technologies."
+      "Crafted high-quality prompts for AI models, leveraging NLP principles",
+      "Improved model accuracy by 15% through systematic testing",
+      "Enhanced code generation capabilities with better context understanding",
+    ],
   },
-  {
-    title: "Bachelor of Technology in Computer Science",
-    institution: "Guru Gobind Singh Indraprastha University",
-    location: "New Delhi, India",
-    period: "August 2018 - May 2022",
-    gpa: "3.6/4.0",
-    description: "Focused on Software Development and Computer Systems. Key courses included Data Structures, Algorithms, and Web Development."
-  }
-];
+]
 
 export default function Experience() {
   return (
-    <section className="mt-[10rem] p-6 flex flex-col justify-center items-center min-h-screen bg-gradient-to-b dark:from-neutral-950 dark:to-black from-neutral-50 to-white">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        className="w-full max-w-6xl"
-      >
-        <h1 className="text-center font-extrabold text-4xl dark:text-white text-black mb-12">
-          Experience
-        </h1>
+    <section className="relative w-full py-12 md:py-24 lg:py-32">
+      <div className="container px-4 md:px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto max-w-3xl space-y-6"
+        >
+          <div className="space-y-2 text-center">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+              Work Experience
+            </h2>
+            <p className="text-neutral-500 dark:text-neutral-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              My professional journey and achievements
+            </p>
+          </div>
 
-        <div className="space-y-12">
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              className="dark:bg-neutral-900/80 bg-white/80 backdrop-blur-lg rounded-xl p-8 border dark:border-neutral-800 border-neutral-200 hover:dark:border-white/20 hover:border-black/20 transition-all duration-300 hover:shadow-xl dark:hover:shadow-white/5 hover:shadow-black/5"
-            >
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-                <div>
-                  <h2 className="text-2xl font-bold dark:text-white text-black mb-2">{exp.company}</h2>
-                  <h3 className="text-xl font-semibold dark:text-neutral-400 text-neutral-600">{exp.role}</h3>
-                </div>
-                <div className="mt-2 md:mt-0 text-right">
-                  <p className="dark:text-neutral-300 text-neutral-700">{exp.location}</p>
-                  <p className="dark:text-neutral-500 text-neutral-500 text-sm">{exp.period}</p>
-                </div>
-              </div>
-
-              <div className="space-y-6">
-                {exp.responsibilities.length > 0 && (
-                  <div>
-                    <h4 className="text-lg font-semibold dark:text-white text-black mb-3 border-b dark:border-neutral-800 border-neutral-200 pb-2">
-                      Daily Responsibilities
-                    </h4>
-                    <ul className="list-disc list-inside space-y-2">
-                      {exp.responsibilities.map((resp, idx) => (
-                        <li key={idx} className="dark:text-neutral-300 text-neutral-700 leading-relaxed pl-4 -indent-4">
-                          {resp}
-                        </li>
-                      ))}
-                    </ul>
+          <div className="space-y-8">
+            {experiences.map((experience, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.02 }}
+                className="rounded-lg border border-neutral-200 p-6 dark:border-neutral-800"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-4">
+                      <Briefcase className="h-6 w-6 text-neutral-500 dark:text-neutral-400" />
+                      <h3 className="text-xl font-bold">{experience.company}</h3>
+                    </div>
+                    <motion.a
+                      href={experience.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex items-center space-x-2 text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+                    >
+                      <ExternalLink className="h-5 w-5" />
+                      <span>Visit</span>
+                    </motion.a>
                   </div>
-                )}
 
-                {exp.achievements.length > 0 && (
+                  <div className="flex items-center space-x-4">
+                    <div className="flex items-center space-x-2">
+                      <Calendar className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
+                      <span className="text-neutral-600 dark:text-neutral-300">
+                        {experience.period}
+                      </span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <MapPin className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
+                      <span className="text-neutral-600 dark:text-neutral-300">
+                        {experience.location}
+                      </span>
+                    </div>
+                  </div>
+
+                  <p className="text-neutral-600 dark:text-neutral-300">
+                    {experience.description}
+                  </p>
+
                   <div>
-                    <h4 className="text-lg font-semibold dark:text-white text-black mb-3 border-b dark:border-neutral-800 border-neutral-200 pb-2">
-                      Key Achievements
+                    <h4 className="font-semibold text-neutral-900 dark:text-neutral-100">
+                      Key Achievements:
                     </h4>
-                    <ul className="list-disc list-inside space-y-2">
-                      {exp.achievements.map((achievement, idx) => (
-                        <li key={idx} className="dark:text-neutral-300 text-neutral-700 leading-relaxed pl-4 -indent-4">
+                    <ul className="mt-2 list-inside list-disc space-y-1 text-neutral-600 dark:text-neutral-300">
+                      {experience.achievements.map((achievement, idx) => (
+                        <motion.li
+                          key={idx}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.3, delay: idx * 0.1 }}
+                          viewport={{ once: true }}
+                        >
                           {achievement}
-                        </li>
+                        </motion.li>
                       ))}
                     </ul>
                   </div>
-                )}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
     </section>
-  );
+  )
 }
 
 const redirection = (url: string) => {
@@ -159,7 +145,7 @@ function GetOutlierDetails() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="flex-column border-1 m-6 flex h-auto items-center justify-center dark:bg-black bg-white"
+      className="flex-column border-1 m-6 flex h-auto items-center justify-center bg-white dark:bg-black"
     >
       <motion.div
         whileHover={{ scale: 1.02 }}
@@ -167,13 +153,6 @@ function GetOutlierDetails() {
         onClick={() => redirection("https://outlier.ai/")}
         className="text-side flex h-fit cursor-pointer flex-col rounded-lg shadow-md dark:shadow-lg-invert md:flex-row p-5 border dark:border-neutral-800 border-neutral-200 transition duration-300 ease-in-out hover:dark:border-white/20 hover:border-black/20 hover:shadow-xl dark:hover:shadow-white/5 hover:shadow-black/5"
       >
-        <img
-          height={500}
-          width={500}
-          className="rounded-t-lg object-cover md:h-auto md:rounded md:rounded-l-lg"
-          src="/Outlier.jpeg"
-          alt="Outlier AI"
-        />
         <div className="flex flex-col justify-start p-6" style={{ width: '100%' }}>
           <h5 className="mb-2 text-center text-xl font-extrabold dark:text-white text-black md:text-left">
             Outlier AI
@@ -212,15 +191,6 @@ function GetLazzifyDetails() {
         onClick={() => redirection("https://www.lazzify.com/")}
         className="text-side flex  h-fit cursor-pointer flex-row rounded-lg shadow-md md:flex-row p-5 border border-transparent transition duration-300 ease-in-out hover:border-[#147efb] hover:shadow-xl"
       >
-
-        <img
-          className="rounded-t-lg object-cover md:h-auto md:rounded md:rounded-l-lg mt-30"
-          style={{
-            maxWidth: '70%', maxHeight: '550px', justifyItems: 'center', alignItems: 'center'
-          }}
-          src="/Lazzify.png"
-          alt="CloudMate Technologies LLP"
-        />
 
         <div className="flex flex-col justify-start p-6" style={{ width: '100%' }}>
           <h5 className="mb-2 text-center text-xl font-extrabold text-[#147efb] dark:text-[#147efb] md:text-left">
