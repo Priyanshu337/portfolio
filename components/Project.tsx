@@ -118,20 +118,10 @@ export default function Project() {
                                             whileTap={{ scale: 0.95 }}
                                             className="flex items-center space-x-2 text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
                                         >
-                                            <Github className="h-5 w-5" />
+                                            <Github className="size-5" />
                                             <span>GitHub</span>
                                         </motion.a>
-                                        <motion.a
-                                            href={project.demo}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            whileHover={{ scale: 1.1 }}
-                                            whileTap={{ scale: 0.95 }}
-                                            className="flex items-center space-x-2 text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
-                                        >
-                                            <ExternalLink className="h-5 w-5" />
-                                            <span>Demo</span>
-                                        </motion.a>
+
                                     </div>
                                 </div>
                             </motion.div>
