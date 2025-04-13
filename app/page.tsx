@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { faFile } from '@fortawesome/free-solid-svg-icons'
@@ -8,28 +10,51 @@ import Contact from "../components/Contact"
 import Project from "@/components/Project"
 import Education from "@/components/Education"
 import Skills from "@/components/Skills"
+import { useEffect, useState } from "react"
 
 export default function IndexPage() {
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    // Add a small delay to ensure all components are properly initialized
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 100)
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (loading) {
+    return (
+      <div className="flex h-screen w-full items-center justify-center bg-white dark:bg-black">
+        <div className="text-center">
+          <div className="mb-4 h-8 w-8 animate-spin rounded-full border-2 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white"></div>
+          <p className="text-lg font-medium text-gray-700 dark:text-gray-300">Loading your portfolio...</p>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <main className="min-h-screen bg-white shadow-[0_0_15px_-3px_rgba(0,0,0,0.1)] dark:bg-black dark:shadow-[0_0_15px_-3px_rgba(255,255,255,0.1)]">
-      <div className="flex h-auto flex-col justify-center md:h-[90vh]" id="home">
-        <div className="container mx-auto flex flex-row items-center justify-between gap-10 px-4 pt-10">
-          <section className="w-1/2">
-            <div className="flex flex-col gap-4">
-              <h1 className="text-5xl font-extrabold leading-tight tracking-tighter text-black dark:text-white sm:text-3xl md:text-4xl lg:text-[2.5rem]">
+      <div className="flex h-auto flex-col justify-center py-6 md:h-[90vh] md:py-0" id="home">
+        <div className="container mx-auto flex flex-col items-center px-3 pt-2 md:flex-row md:items-start md:justify-between md:gap-10 md:px-4 md:pt-10">
+          <section className="w-full px-0 sm:px-2 md:w-1/2 md:px-0">
+            <div className="flex flex-col gap-3 text-center md:gap-4 md:text-left">
+              <h1 className="text-3xl font-extrabold leading-tight tracking-tighter text-black dark:text-white sm:text-4xl md:text-4xl lg:text-[2.5rem]">
                 Priyanshu Choudhary</h1>
-              <h2 className="text-2xl font-semibold text-gray-700 dark:text-gray-300">
+              <h2 className="text-lg font-semibold text-gray-700 dark:text-gray-300 sm:text-xl md:text-2xl">
                 Fullstack Developer | NextJS | ReactJS | Node
               </h2>
-              <p className="max-w-[600px] text-xl font-medium leading-7 text-gray-600 dark:text-gray-400 sm:text-base">
+              <p className="text-base font-medium leading-6 text-gray-600 dark:text-gray-400 sm:text-lg sm:leading-7 md:max-w-[600px]">
                 Hi there, I'm a FullStack developer who builds for Web and Mobile Applications with a design-oriented approach.
               </p>
-              <p className="text-lg text-gray-700 dark:text-gray-300">
+              <p className="text-base text-gray-700 dark:text-gray-300 sm:text-lg">
                 Let&apos;s build something amazing together!
               </p>
-              <div className="flex gap-4">
+              <div className="flex justify-center gap-5 md:justify-start md:gap-6">
                 <a
-                  aria-label="linkedin"
+                  aria-label="github"
                   rel="noreferrer"
                   target="_blank"
                   title="Github Profile"
@@ -38,9 +63,9 @@ export default function IndexPage() {
                 >
                   <FontAwesomeIcon
                     icon={faGithub}
-                    height={30}
-                    width={30}
-                    className="hover:text-[#147efb]"
+                    height={24}
+                    width={24}
+                    className="hover:text-[#147efb] sm:h-[30px] sm:w-[30px]"
                   />
                 </a>
                 <a
@@ -53,13 +78,13 @@ export default function IndexPage() {
                 >
                   <FontAwesomeIcon
                     icon={faLinkedin}
-                    height={30}
-                    width={30}
-                    className="hover:text-[#147efb]"
+                    height={24}
+                    width={24}
+                    className="hover:text-[#147efb] sm:h-[30px] sm:w-[30px]"
                   />
                 </a>
                 <a
-                  aria-label="linkedin"
+                  aria-label="resume"
                   data-te-toggle="tooltip"
                   title="Resume"
                   rel="noreferrer"
@@ -69,31 +94,31 @@ export default function IndexPage() {
                 >
                   <FontAwesomeIcon
                     icon={faFile}
-                    height={30}
-                    width={30}
-                    className="hover:text-[#147efb]"
+                    height={24}
+                    width={24}
+                    className="hover:text-[#147efb] sm:h-[30px] sm:w-[30px]"
                   />
                 </a>
               </div>
             </div>
           </section>
-          <div className="flex w-1/2 justify-center">
+          <div className="mt-6 flex w-full justify-center sm:mt-8 md:mt-0 md:w-1/2">
             <div className="hero-img" />
           </div>
         </div>
 
-        <div className="container mx-auto mt-20 px-4">
-          <div className="skills flex flex-row flex-wrap items-center justify-start text-center">
-            <h1 className="mb-4 flex text-2xl font-extrabold text-black dark:text-white">Tech Stack</h1>
-            <ul className="flex flex-wrap gap-4">
+        <div className="container mx-auto mt-8 px-3 sm:mt-10 md:mt-20 md:px-4">
+          <div className="skills flex flex-col flex-wrap items-center justify-center text-center md:flex-row md:items-start md:justify-start">
+            <h1 className="mb-3 flex text-lg font-extrabold text-black dark:text-white sm:mb-4 sm:text-xl md:text-2xl">Tech Stack</h1>
+            <ul className="flex flex-wrap justify-center gap-4 sm:gap-6 md:justify-start md:gap-4">
               <li className="transition-transform hover:scale-110">
                 <Image
                   src="/typescript.png"
                   title="Typescript"
                   alt="program_img"
-                  width={38}
-                  height={38}
-                  className="transition-opacity hover:opacity-80"
+                  width={32}
+                  height={32}
+                  className="transition-opacity hover:opacity-80 sm:h-[38px] sm:w-[38px]"
                 />
               </li>
               <li className="transition-transform hover:scale-110">
@@ -101,9 +126,9 @@ export default function IndexPage() {
                   src="/node-js.png"
                   title="Node Js"
                   alt="program_img"
-                  width={38}
-                  height={38}
-                  className="transition-opacity hover:opacity-80"
+                  width={32}
+                  height={32}
+                  className="transition-opacity hover:opacity-80 sm:h-[38px] sm:w-[38px]"
                 />
               </li>
               <li className="transition-transform hover:scale-110">
@@ -111,9 +136,9 @@ export default function IndexPage() {
                   src="/react.png"
                   title="React Js"
                   alt="program_img"
-                  width={38}
-                  height={38}
-                  className="transition-opacity hover:opacity-80"
+                  width={32}
+                  height={32}
+                  className="transition-opacity hover:opacity-80 sm:h-[38px] sm:w-[38px]"
                 />
               </li>
               <li className="transition-transform hover:scale-110">
@@ -121,9 +146,9 @@ export default function IndexPage() {
                   src="/html-5.png"
                   title="HTML 5"
                   alt="program_img"
-                  width={38}
-                  height={38}
-                  className="transition-opacity hover:opacity-80"
+                  width={32}
+                  height={32}
+                  className="transition-opacity hover:opacity-80 sm:h-[38px] sm:w-[38px]"
                 />
               </li>
               <li className="transition-transform hover:scale-110">
@@ -131,9 +156,9 @@ export default function IndexPage() {
                   src="/css-3.png"
                   title="CSS 3"
                   alt="program_img"
-                  width={38}
-                  height={38}
-                  className="transition-opacity hover:opacity-80"
+                  width={32}
+                  height={32}
+                  className="transition-opacity hover:opacity-80 sm:h-[38px] sm:w-[38px]"
                 />
               </li>
             </ul>
@@ -145,16 +170,16 @@ export default function IndexPage() {
         <About />
       </div>
 
-      <div id="education">
-        <Education />
+      <div id="experience">
+        <EXP />
       </div>
 
       <div id="skills">
         <Skills />
       </div>
 
-      <div id="experience">
-        <EXP />
+      <div id="education">
+        <Education />
       </div>
 
       <div id="project">

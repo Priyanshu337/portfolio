@@ -9,7 +9,6 @@ const projects = [
         description: "Developed a Figma clone application for collaborative UI design and interaction. Built with Next.js and TypeScript, leveraging Liveblock for real-time collaboration. Implemented features like multi-user messaging, reaction emojis, and interactive design tools.",
         technologies: ["Next.js", "TypeScript", "Liveblock", "Tailwind CSS"],
         github: "https://github.com/Priyanshu337/FigmaClone",
-        demo: "#",
         features: [
             "Real-time collaboration",
             "Multi-user messaging",
@@ -21,8 +20,7 @@ const projects = [
         title: "EaseAppMD",
         description: "Built a web app for scheduling doctor appointments, designing UI in Figma for React implementation. Managed backend integration using .NET and MySQL, with deployment via Azure DevOps.",
         technologies: ["React", ".NET", "MySQL", "Azure DevOps"],
-        github: "#",
-        demo: "#",
+        github: "https://github.com/Priyanshu337/EaseAppMD",
         features: [
             "Doctor appointment scheduling",
             "User authentication",
@@ -34,8 +32,7 @@ const projects = [
         title: "Wear'e",
         description: "Developed MERN stack e-commerce project built on Redux state management library. Implemented Stripe payment feature using Stripe API. Used MongoDB for data storage.",
         technologies: ["MERN Stack", "Redux", "Stripe", "MongoDB"],
-        github: "#",
-        demo: "#",
+        github: "https://github.com/Priyanshu337/Shoes_Ecommerce",
         features: [
             "E-commerce functionality",
             "Stripe payment integration",

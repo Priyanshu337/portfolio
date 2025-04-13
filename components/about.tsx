@@ -1,11 +1,20 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react"
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Copy, Check } from "lucide-react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons"
+import { useState } from "react"
 
 export default function About() {
+  const [copied, setCopied] = useState(false)
+
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+
   return (
     <section className="relative w-full py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
@@ -35,10 +44,24 @@ export default function About() {
               whileHover={{ scale: 1.05 }}
               className="flex items-center space-x-4 rounded-lg border border-neutral-200 p-4 dark:border-neutral-800"
             >
-              <Mail className="size-6 text-neutral-500 dark:text-neutral-400" />
-              <div>
+              <Mail className="size-6 shrink-0 text-neutral-500 dark:text-neutral-400" />
+              <div className="min-w-0 flex-1">
                 <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">Email</p>
-                <p className="text-sm text-neutral-900 dark:text-neutral-100">priyanshuchoudhary0104@gmail.com</p>
+                <div className="flex items-center gap-2">
+                  <p className="break-all text-sm text-neutral-900 dark:text-neutral-100">priyanshuchoudhary0104@gmail.com</p>
+                  <button
+                    onClick={() => copyToClipboard("priyanshuchoudhary0104@gmail.com")}
+                    className="rounded-full p-1 text-neutral-500 hover:bg-neutral-100 hover:text-neutral-900 dark:hover:bg-neutral-800 dark:hover:text-neutral-100"
+                    aria-label="Copy email"
+                    title="Copy email"
+                  >
+                    {copied ? (
+                      <Check className="size-4 text-green-500" />
+                    ) : (
+                      <Copy className="size-4" />
+                    )}
+                  </button>
+                </div>
               </div>
             </motion.div>
             <motion.div
