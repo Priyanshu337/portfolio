@@ -44,10 +44,10 @@ export default function IndexPage() {
               <h1 className="text-3xl font-extrabold leading-tight tracking-tighter text-black dark:text-white sm:text-4xl md:text-4xl lg:text-[2.5rem]">
                 Priyanshu Choudhary</h1>
               <h2 className="text-lg font-semibold text-gray-700 dark:text-gray-300 sm:text-xl md:text-2xl">
-                Fullstack Developer | NextJS | ReactJS | Node
+                Full-Stack Software Engineer | AI-Native Applications | SaaS Platforms
               </h2>
               <p className="text-base font-medium leading-6 text-gray-600 dark:text-gray-400 sm:text-lg sm:leading-7 md:max-w-[600px]">
-                Hi there, I'm a FullStack developer who builds for Web and Mobile Applications with a design-oriented approach.
+                Results-driven Full-Stack Software Engineer with 1+ year of experience building production-grade AI-native applications and scalable SaaS platforms. Strong expertise in JavaScript, TypeScript, React, Node.js, and modern AI frameworks.
               </p>
               <p className="text-base text-gray-700 dark:text-gray-300 sm:text-lg">
                 Let&apos;s build something amazing together!

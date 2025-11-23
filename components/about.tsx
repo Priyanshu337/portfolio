@@ -29,14 +29,12 @@ export default function About() {
               About Me
             </h2>
             <p className="text-neutral-500 dark:text-neutral-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Full Stack Developer | Problem Solver | Tech Enthusiast
+              Full-Stack Software Engineer | AI-Native Applications | SaaS Platforms
             </p>
           </div>
           <div className="mx-auto max-w-[700px] text-center text-neutral-500 dark:text-neutral-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             <p>
-              I am a passionate Full Stack Developer with expertise in building scalable web applications.
-              With a strong foundation in both frontend and backend technologies, I create efficient,
-              user-friendly solutions that solve real-world problems.
+              Results-driven Full-Stack Software Engineer with 1+ year of experience building production-grade AI-native applications and scalable SaaS platforms. Strong expertise in JavaScript, TypeScript, React, Node.js, and modern AI frameworks (LangGraph, LangChain, OpenAI). Deep understanding of data structures, algorithms, design patterns, and distributed systems.
             </p>
           </div>
           <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
@@ -71,7 +69,7 @@ export default function About() {
               <Phone className="size-6 text-neutral-500 dark:text-neutral-400" />
               <div>
                 <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">Phone</p>
-                <p className="text-sm text-neutral-900 dark:text-neutral-100">+1 (647)-937-2641</p>
+                <p className="text-sm text-neutral-900 dark:text-neutral-100">+91 9875050087</p>
               </div>
             </motion.div>
             <motion.div
@@ -81,7 +79,7 @@ export default function About() {
               <MapPin className="size-6 text-neutral-500 dark:text-neutral-400" />
               <div>
                 <p className="text-sm font-medium text-neutral-500 dark:text-neutral-400">Location</p>
-                <p className="text-sm text-neutral-900 dark:text-neutral-100">Toronto, ON, Canada</p>
+                <p className="text-sm text-neutral-900 dark:text-neutral-100">Ahmedabad, Gujarat, India</p>
               </div>
             </motion.div>
           </div>

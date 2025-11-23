@@ -5,27 +5,27 @@ import { GraduationCap, Calendar, MapPin, Award } from "lucide-react"
 
 const education = [
     {
-        degree: "Mobile Solution Development",
+        degree: "Post-Graduate Diploma in Mobile Solutions Development",
         institution: "Conestoga College",
-        location: "Waterloo, ON",
-        period: "2022 - 2024",
-        gpa: "3.3/4.0",
-        description: "Specialized in Mobile and Web application development with a focus on modern technologies and best practices.",
+        location: "Canada",
+        period: "2022 - 2023",
+        gpa: "3.4/4.0",
+        description: "Focused on mobile and web application development with emphasis on modern technologies and cloud computing.",
         achievements: [
-            "Published research paper on mobile app security",
-            "Led mobile development team in capstone project",
+            "Relevant Coursework: Data Structures, Algorithms, Cloud Computing, Database Systems",
+            "Developed multiple mobile and web applications using modern frameworks",
         ],
     },
     {
-        degree: "Bachelor in Computer Application",
+        degree: "Bachelor of Computer Applications",
         institution: "GLS University",
         location: "Ahmedabad, India",
         period: "2018 - 2021",
-        gpa: "3.4/4.0",
-        description: "Focused on software development fundamentals and modern programming practices.",
+        gpa: "3.2/4.0",
+        description: "Comprehensive computer science education with focus on software development fundamentals.",
         achievements: [
-            "Won inter-university hackathon",
-            "Developed multiple web applications for university projects",
+            "Relevant Coursework: OOP, Data Structures, Web Development, Database Management",
+            "Built strong foundation in programming and software engineering principles",
         ],
     },
 ]

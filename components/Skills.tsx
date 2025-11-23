@@ -3,66 +3,81 @@ import { motion } from "framer-motion";
 import { Code, Cpu, Shield } from "lucide-react";
 
 const designPatterns = [
-    { name: "Singleton", icon: "1️⃣" },
     { name: "Factory", icon: "🏭" },
-    { name: "Abstract Factory", icon: "🏗️" },
-    { name: "Builder", icon: "🔧" },
-    { name: "Prototype", icon: "🧬" },
     { name: "Adapter", icon: "🔌" },
-    { name: "Bridge", icon: "🌉" },
-    { name: "Composite", icon: "🌿" },
-    { name: "Decorator", icon: "✨" },
-    { name: "Facade", icon: "🏠" },
-    { name: "Flyweight", icon: "🪶" },
-    { name: "Proxy", icon: "🛡️" },
+    { name: "Strategy", icon: "🎯" },
+    { name: "Pub/Sub", icon: "📡" },
+    { name: "Fan-Out", icon: "📤" },
+    { name: "Singleton", icon: "1️⃣" },
+    { name: "Builder", icon: "🔧" },
     { name: "Observer", icon: "👀" },
+    { name: "Decorator", icon: "✨" },
+    { name: "Proxy", icon: "🛡️" },
 ];
 const technicalSkills = [
-    { name: "React.js", icon: "⚛️" },
-    { name: "Next.js", icon: "🚀" },
-    { name: "TypeScript", icon: "📘" },
+    // Programming Languages
     { name: "JavaScript", icon: "💻" },
-    { name: "HTML", icon: "📄" },
-    { name: "CSS", icon: "🎨" },
-    { name: "Tailwind", icon: "💨" },
-    { name: "ShadCN UI", icon: "🧩" },
+    { name: "TypeScript", icon: "📘" },
+    { name: "Python", icon: "🐍" },
     { name: "Node.js", icon: "🟢" },
+    { name: "HTML5", icon: "📄" },
+    { name: "CSS3", icon: "🎨" },
+
+    // Frontend
+    { name: "React", icon: "⚛️" },
+    { name: "Next.js", icon: "🚀" },
+    { name: "Tailwind CSS", icon: "💨" },
+    { name: "ShadCN UI", icon: "🧩" },
+
+    // Backend & APIs
     { name: "Express.js", icon: "🚏" },
-    { name: "REST API", icon: "🔌" },
-    { name: "GraphQL API", icon: "🕸️" },
+    { name: "REST APIs", icon: "🔌" },
+    { name: "WebSocket", icon: "🔗" },
+    { name: "Socket.io", icon: "⚡" },
+
+    // Databases
+    { name: "PostgreSQL", icon: "🐘" },
+    { name: "MySQL", icon: "🗄️" },
     { name: "MongoDB", icon: "🍃" },
-    { name: "NoSQL", icon: "🧮" },
-    { name: "ORM Tools", icon: "🧱" },
+    { name: "TimescaleDB", icon: "⏱️" },
+    { name: "Redis", icon: "🟥" },
+
+    // AI/ML & GenAI
+    { name: "LangChain", icon: "🧠" },
+    { name: "LangGraph", icon: "🕸️" },
+    { name: "Pinecone", icon: "🌲" },
+    { name: "RAG", icon: "🔍" },
+    { name: "OpenAI API", icon: "🤖" },
+    { name: "Vector Embeddings", icon: "🧲" },
+
+    // Cloud & Infrastructure
     { name: "AWS EC2", icon: "🖥️" },
-    { name: "AWS Lambda", icon: "🧬" },
+    { name: "AWS Lambda", icon: "λ" },
     { name: "AWS S3", icon: "🗂️" },
     { name: "AWS IAM", icon: "🛡️" },
-    { name: "AWS VPC", icon: "🌐" },
-    { name: "AWS Amplify", icon: "📢" },
     { name: "API Gateway", icon: "🛣️" },
-    { name: "AWS WAF", icon: "🧱" },
     { name: "CloudWatch", icon: "📈" },
-    { name: "DynamoDB", icon: "⚙️" },
-    { name: "ElasticSearch", icon: "🔍" },
-    { name: "Langchain", icon: "🧠" },
-    { name: "Vector Embeddings", icon: "🧲" },
-    { name: "Transcriber", icon: "🎙️" },
-    { name: "Synthesizer", icon: "🎧" },
-    { name: "PineConeDB", icon: "🌲" },
-    { name: "OpenAI", icon: "🤖" },
     { name: "Docker", icon: "🐳" },
-    { name: "Redis", icon: "🟥" },
+
+    // Message Queues & Streaming
+    { name: "BullMQ", icon: "🐂" },
+    { name: "Apache Kafka", icon: "📨" },
+    { name: "Redis Pub/Sub", icon: "📡" },
+
+    // DevOps & Tools
     { name: "Git", icon: "🔧" },
-    { name: "Version Controlling", icon: "📂" },
+    { name: "CI/CD", icon: "⚙️" },
+    { name: "Jest", icon: "✅" },
+    { name: "Supertest", icon: "🧪" },
 ];
 
 const secondarySkills = [
     { name: "Agile/Scrum", icon: "🔄" },
-    { name: "CI/CD", icon: "⚡" },
-    { name: "REST APIs", icon: "🌐" },
-    { name: "GraphQL", icon: "📊" },
     { name: "Microservices", icon: "🧩" },
-    { name: "Testing", icon: "✅" },
+    { name: "Monorepo (Turborepo)", icon: "📦" },
+    { name: "Event-Driven Architecture", icon: "📨" },
+    { name: "Distributed Systems", icon: "🌐" },
+    { name: "System Design", icon: "🏗️" },
 ]
 
 export default function SkillsSection() {
